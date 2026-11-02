@@ -1,3 +1,12 @@
+export interface WrapItem {
+  name: string;
+  description: string;
+  regular: number | null;
+  jumbo: number | null;
+  image: string;
+  isVeg: boolean;
+}
+
 export interface MenuItem {
   name: string;
   description: string;
@@ -13,6 +22,105 @@ export interface MenuCategory {
   items: MenuItem[];
   flavourNote?: string;
 }
+
+export const wraps: WrapItem[] = [
+  {
+    name: "Paneer Tikka Wrap",
+    description: "Smoky grilled paneer with tandoori spices, onions & mint chutney.",
+    regular: null,
+    jumbo: null,
+    image: "/wraps/paneer_tikka.jpg",
+    isVeg: true,
+  },
+  {
+    name: "Paneer Peri Wrap",
+    description: "Spiced paneer with fiery peri peri sauce, lettuce & fresh veggies.",
+    regular: null,
+    jumbo: null,
+    image: "/wraps/paneer_peri.jpg",
+    isVeg: true,
+  },
+  {
+    name: "Paneer Wrap",
+    description: "Classic seasoned paneer with crisp veggies and tangy sauce.",
+    regular: null,
+    jumbo: null,
+    image: "/wraps/paneer_wrap.jpg",
+    isVeg: true,
+  },
+  {
+    name: "Aloo Tikki Wrap",
+    description: "Crispy potato tikki with chutneys, onions & fresh herbs.",
+    regular: null,
+    jumbo: null,
+    image: "/wraps/aaloo_tikki.jpg",
+    isVeg: true,
+  },
+  {
+    name: "Hara Bhara Wrap",
+    description: "Wholesome green patty with spinach, peas & mint mayo.",
+    regular: null,
+    jumbo: null,
+    image: "/wraps/hara_bhara.jpg",
+    isVeg: true,
+  },
+  {
+    name: "Veggie Patty Wrap",
+    description: "Juicy veggie patty loaded with fresh greens and house sauce.",
+    regular: null,
+    jumbo: null,
+    image: "/wraps/veggie_patty.jpg",
+    isVeg: true,
+  },
+  {
+    name: "Falafel Wrap",
+    description: "Crispy falafel with hummus, pickles, lettuce & tahini drizzle.",
+    regular: null,
+    jumbo: null,
+    image: "/wraps/falafal_wrap.jpg",
+    isVeg: true,
+  },
+  {
+    name: "Tandoori Chicken Wrap",
+    description: "Marinated tandoori chicken with onions, chutney & yogurt sauce.",
+    regular: null,
+    jumbo: null,
+    image: "/wraps/tandoori_chicken_wrap.jpg",
+    isVeg: false,
+  },
+  {
+    name: "Peri Peri Chicken Wrap",
+    description: "Grilled chicken tossed in bold peri peri sauce with fresh slaw.",
+    regular: null,
+    jumbo: null,
+    image: "/wraps/peri_peri_chicken_wrap.jpg",
+    isVeg: false,
+  },
+  {
+    name: "Chicken Kabab Wrap",
+    description: "Tender chicken kabab with mint chutney, onions & crisp lettuce.",
+    regular: null,
+    jumbo: null,
+    image: "/wraps/chicken_kabab.jpg",
+    isVeg: false,
+  },
+  {
+    name: "Krispy Chicken Wrap",
+    description: "Crunchy fried chicken with coleslaw, pickles & smoky mayo.",
+    regular: null,
+    jumbo: null,
+    image: "/wraps/krispy_chicken.jpg",
+    isVeg: false,
+  },
+  {
+    name: "Pesto Chicken Wrap",
+    description: "Grilled chicken with fresh basil pesto, sun-dried tomatoes & greens.",
+    regular: null,
+    jumbo: null,
+    image: "/wraps/Pesto_Chicken_Wrap.jpg",
+    isVeg: false,
+  },
+];
 
 export const menuCategories: MenuCategory[] = [
   {
