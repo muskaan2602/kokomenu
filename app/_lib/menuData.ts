@@ -131,9 +131,45 @@ export const wraps: WrapItem[] = [
 ];
 
 export const subs: SubItem[] = [
+  // ── VEG ──
+  {
+    name: "Paneer Tikka Sub",
+    description: "Smoky grilled paneer with tandoori spices, onions & mint chutney in a toasted sub.",
+    price: 180,
+    image: "/wraps/paneer_tikka.jpg",
+    isVeg: true,
+  },
+  {
+    name: "Paneer Peri Peri Sub",
+    description: "Spiced paneer with fiery peri peri sauce, lettuce & fresh veggies in a soft sub.",
+    price: 180,
+    image: "/wraps/paneer_periperi.jpg",
+    isVeg: true,
+  },
+  {
+    name: "Paneer Patty Sub",
+    description: "Classic seasoned paneer patty with crisp veggies and tangy sauce in a toasted sub.",
+    price: 210,
+    image: "/wraps/paneer_wrap.jpg",
+    isVeg: true,
+  },
+  {
+    name: "Aloo Patty Sub",
+    description: "Crispy potato patty with chutneys, onions & fresh herbs in a soft sub roll.",
+    price: 160,
+    image: "/wraps/Aloo_Tikki_Wrap.jpg",
+    isVeg: true,
+  },
+  {
+    name: "Hara Bhara Patty Sub",
+    description: "Wholesome green patty with spinach, peas & mint mayo in a toasted sub.",
+    price: 200,
+    image: "/wraps/hara_bhara.jpg",
+    isVeg: true,
+  },
   {
     name: "Veggie Patty Sub",
-    description: "Juicy veggie patty with fresh greens, pickles & house sauce in a toasted sub.",
+    description: "Juicy veggie patty loaded with fresh greens and house sauce in a toasted sub.",
     price: 160,
     image: "/subs/veggi_patty_sub.jpg",
     isVeg: true,
@@ -152,11 +188,26 @@ export const subs: SubItem[] = [
     image: "/subs/pesto_paneer_sub.jpg",
     isVeg: true,
   },
+  // ── NON-VEG ──
   {
-    name: "Chicken Sub",
-    description: "Seasoned grilled chicken with fresh veggies, sauces & a toasted sub bun.",
+    name: "Tandoori Chicken Sub",
+    description: "Marinated tandoori chicken with onions, chutney & yogurt sauce in a toasted sub.",
     price: 210,
-    image: "/subs/chicken_sub.jpg",
+    image: "/wraps/tandoori_chicken_wrap.jpg",
+    isVeg: false,
+  },
+  {
+    name: "Peri Peri Chicken Sub",
+    description: "Grilled chicken tossed in bold peri peri sauce with fresh slaw in a sub.",
+    price: 210,
+    image: "/wraps/peri_peri_chicken_wrap.jpg",
+    isVeg: false,
+  },
+  {
+    name: "Chicken Seekh Kabab Sub",
+    description: "Tender chicken seekh kabab with mint chutney, onions & crisp lettuce in a sub.",
+    price: 210,
+    image: "/wraps/chicken_kabab.jpg",
     isVeg: false,
   },
   {
@@ -164,6 +215,13 @@ export const subs: SubItem[] = [
     description: "Crunchy fried chicken with coleslaw, pickles & smoky mayo in a toasted sub.",
     price: 220,
     image: "/subs/krispy_chicken_sub.jpg",
+    isVeg: false,
+  },
+  {
+    name: "Chicken Sub",
+    description: "Seasoned grilled chicken with fresh veggies & sauces in a toasted sub bun.",
+    price: 210,
+    image: "/subs/chicken_sub.jpg",
     isVeg: false,
   },
   {
