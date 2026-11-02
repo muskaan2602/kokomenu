@@ -1,3 +1,11 @@
+export interface SubItem {
+  name: string;
+  description: string;
+  price: number | null;
+  image: string;
+  isVeg: boolean;
+}
+
 export interface WrapItem {
   name: string;
   description: string;
@@ -44,7 +52,7 @@ export const wraps: WrapItem[] = [
     name: "Paneer Patty Wrap",
     description: "Classic seasoned paneer patty with crisp veggies and tangy sauce.",
     regular: 170,
-    jumbo: 190,
+    jumbo: 210,
     image: "/wraps/paneer_wrap.jpg",
     isVeg: true,
   },
@@ -60,7 +68,7 @@ export const wraps: WrapItem[] = [
     name: "Hara Bhara Patty Wrap",
     description: "Wholesome green patty with spinach, peas & mint mayo.",
     regular: 170,
-    jumbo: 190,
+    jumbo: 200,
     image: "/wraps/hara_bhara.jpg",
     isVeg: true,
   },
@@ -84,7 +92,7 @@ export const wraps: WrapItem[] = [
     name: "Tandoori Chicken Wrap",
     description: "Marinated tandoori chicken with onions, chutney & yogurt sauce.",
     regular: 180,
-    jumbo: 200,
+    jumbo: 210,
     image: "/wraps/tandoori_chicken_wrap.jpg",
     isVeg: false,
   },
@@ -92,7 +100,7 @@ export const wraps: WrapItem[] = [
     name: "Peri Peri Chicken Wrap",
     description: "Grilled chicken tossed in bold peri peri sauce with fresh slaw.",
     regular: 180,
-    jumbo: 200,
+    jumbo: 210,
     image: "/wraps/peri_peri_chicken_wrap.jpg",
     isVeg: false,
   },
@@ -100,7 +108,7 @@ export const wraps: WrapItem[] = [
     name: "Chicken Seekh Kabab Wrap",
     description: "Tender chicken seekh kabab with mint chutney, onions & crisp lettuce.",
     regular: 180,
-    jumbo: 200,
+    jumbo: 210,
     image: "/wraps/chicken_kabab.jpg",
     isVeg: false,
   },
@@ -108,7 +116,7 @@ export const wraps: WrapItem[] = [
     name: "Krispy Chicken Wrap",
     description: "Crunchy fried chicken with coleslaw, pickles & smoky mayo.",
     regular: 190,
-    jumbo: 210,
+    jumbo: 220,
     image: "/wraps/krispy_chicken.jpg",
     isVeg: false,
   },
@@ -116,8 +124,53 @@ export const wraps: WrapItem[] = [
     name: "Pesto Chicken Wrap",
     description: "Grilled chicken with fresh basil pesto, sun-dried tomatoes & greens.",
     regular: 230,
-    jumbo: 250,
+    jumbo: 260,
     image: "/wraps/Pesto_Chicken_Wrap.jpg",
+    isVeg: false,
+  },
+];
+
+export const subs: SubItem[] = [
+  {
+    name: "Veggie Patty Sub",
+    description: "Juicy veggie patty with fresh greens, pickles & house sauce in a toasted sub.",
+    price: 160,
+    image: "/subs/veggi_patty_sub.jpg",
+    isVeg: true,
+  },
+  {
+    name: "Falafel Sub",
+    description: "Crispy falafel with hummus, pickles, lettuce & tahini in a soft sub roll.",
+    price: 190,
+    image: "/subs/falafal_sub.jpg",
+    isVeg: true,
+  },
+  {
+    name: "Pesto Paneer Sub",
+    description: "Grilled paneer with fresh basil pesto, sun-dried tomatoes & greens.",
+    price: 210,
+    image: "/subs/pesto_paneer_sub.jpg",
+    isVeg: true,
+  },
+  {
+    name: "Chicken Sub",
+    description: "Seasoned grilled chicken with fresh veggies, sauces & a toasted sub bun.",
+    price: 210,
+    image: "/subs/chicken_sub.jpg",
+    isVeg: false,
+  },
+  {
+    name: "Krispy Chicken Sub",
+    description: "Crunchy fried chicken with coleslaw, pickles & smoky mayo in a toasted sub.",
+    price: 220,
+    image: "/subs/krispy_chicken_sub.jpg",
+    isVeg: false,
+  },
+  {
+    name: "Pesto Chicken Sub",
+    description: "Grilled chicken with basil pesto, sun-dried tomatoes & fresh greens.",
+    price: 260,
+    image: "/subs/pesto_chicken_sub.jpg",
     isVeg: false,
   },
 ];

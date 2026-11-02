@@ -3,7 +3,7 @@
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 import { useState } from "react";
-import { menuCategories, flavours, wraps } from "@/app/_lib/menuData";
+import { menuCategories, flavours, wraps, subs } from "@/app/_lib/menuData";
 
 // Brown from the actual menu images: #7B4A2D warm medium chocolate
 const BROWN = {
@@ -237,6 +237,26 @@ export default function MenuContent() {
           >
             🌯 Wraps
           </a>
+          <a
+            href="#subs"
+            onClick={() => setActiveCategory("subs")}
+            className="whitespace-nowrap text-[11px] font-bold px-4 py-2 rounded-full transition-all duration-300 tracking-wide"
+            style={
+              activeCategory === "subs"
+                ? {
+                    background: `linear-gradient(135deg, ${BROWN.beige}, ${BROWN.beigeAlt})`,
+                    color: BROWN.bgDeep,
+                    boxShadow: `0 0 14px ${BROWN.beige}50`,
+                  }
+                : {
+                    background: BROWN.bgMid,
+                    color: BROWN.muted,
+                    border: `1px solid ${BROWN.border}60`,
+                  }
+            }
+          >
+            🥖 Subs
+          </a>
         </div>
       </nav>
 
@@ -455,6 +475,53 @@ export default function MenuContent() {
           </div>
         </section>
 
+        {/* ── SUBS SECTION ── */}
+        <section id="subs">
+          <div className="flex items-center gap-3 mb-6">
+            <div
+              className="w-11 h-11 rounded-xl flex items-center justify-center text-xl shrink-0"
+              style={{
+                background: `linear-gradient(135deg, ${BROWN.bgMid}, ${BROWN.border})`,
+                border: `1px solid ${BROWN.accent}`,
+                boxShadow: `0 0 14px ${BROWN.accent}40`,
+              }}
+            >
+              🥖
+            </div>
+            <div>
+              <h2 className="text-3xl font-black tracking-wide leading-none" style={{ color: BROWN.beige }}>
+                Subs
+              </h2>
+              <div className="h-[2px] mt-1.5 w-20 rounded-full"
+                   style={{ background: `linear-gradient(to right, ${BROWN.beige}, ${BROWN.beigeAlt}80, transparent)` }} />
+            </div>
+          </div>
+
+          {/* Veg subs */}
+          <p className="text-[10px] font-black tracking-[0.3em] uppercase mb-3 flex items-center gap-2"
+             style={{ color: BROWN.beige }}>
+            <span className="inline-block w-3 h-3 rounded-sm border-2 border-green-500" />
+            Veg
+          </p>
+          <div className="space-y-4 mb-6">
+            {subs.filter(s => s.isVeg).map((sub) => (
+              <SubCard key={sub.name} sub={sub} BROWN={BROWN} />
+            ))}
+          </div>
+
+          {/* Non-veg subs */}
+          <p className="text-[10px] font-black tracking-[0.3em] uppercase mb-3 flex items-center gap-2"
+             style={{ color: BROWN.beige }}>
+            <span className="inline-block w-3 h-3 rounded-sm border-2 border-red-500" />
+            Non-Veg
+          </p>
+          <div className="space-y-4">
+            {subs.filter(s => !s.isVeg).map((sub) => (
+              <SubCard key={sub.name} sub={sub} BROWN={BROWN} />
+            ))}
+          </div>
+        </section>
+
         {/* ── FLAVOUR SHOTS ── */}
         <section id="flavours">
           <div className="flex items-center gap-3 mb-6">
@@ -636,6 +703,86 @@ function WrapCard({ wrap, BROWN }: { wrap: import("@/app/_lib/menuData").WrapIte
                 <span className="text-xs italic" style={{ color: BROWN.muted }}>—</span>
               )}
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom shine */}
+      <div className="absolute bottom-0 left-4 right-4 h-px"
+           style={{ background: `linear-gradient(to right, transparent, ${BROWN.border}80, transparent)` }} />
+    </div>
+  );
+}
+
+// ── SUB CARD COMPONENT ──
+function SubCard({ sub, BROWN }: { sub: import("@/app/_lib/menuData").SubItem; BROWN: Record<string, string> }) {
+  return (
+    <div
+      className="relative overflow-hidden rounded-2xl"
+      style={{
+        background: `linear-gradient(145deg, ${BROWN.bgMid} 0%, ${BROWN.bg} 60%, ${BROWN.bgDeep} 100%)`,
+        border: `1px solid ${BROWN.border}80`,
+        boxShadow: `0 8px 28px rgba(0,0,0,0.45), inset 0 1px 0 ${BROWN.beige}10`,
+      }}
+    >
+      <div className="flex">
+        {/* Image */}
+        <div className="relative w-36 h-44 shrink-0 overflow-hidden rounded-l-2xl">
+          <Image
+            src={sub.image}
+            alt={sub.name}
+            fill
+            className="object-cover scale-105 hover:scale-110 transition-transform duration-700"
+            sizes="144px"
+          />
+          <div
+            className="absolute inset-0"
+            style={{ background: `linear-gradient(to right, rgba(123,74,45,0.1) 0%, ${BROWN.bg}CC 100%)` }}
+          />
+          {/* Veg/Non-veg dot */}
+          <div
+            className="absolute top-2 left-2 w-5 h-5 rounded-sm flex items-center justify-center"
+            style={{ background: BROWN.bgDeep, border: `2px solid ${sub.isVeg ? "#22c55e" : "#ef4444"}` }}
+          >
+            <div className={`w-2.5 h-2.5 rounded-full ${sub.isVeg ? "bg-green-500" : "bg-red-500"}`} />
+          </div>
+        </div>
+
+        {/* Content */}
+        <div className="flex-1 p-4 flex flex-col justify-between min-w-0">
+          <div>
+            {/* Name in beige box */}
+            <div
+              className="inline-block px-3 py-1.5 rounded-lg mb-2"
+              style={{
+                background: `linear-gradient(135deg, ${BROWN.beige}, ${BROWN.beigeAlt})`,
+                boxShadow: "0 2px 10px rgba(0,0,0,0.35)",
+              }}
+            >
+              <h3 className="font-black text-sm leading-none tracking-wide" style={{ color: BROWN.bgDeep }}>
+                {sub.name}
+              </h3>
+            </div>
+            <p className="text-xs leading-relaxed line-clamp-2 mt-1" style={{ color: BROWN.text }}>
+              {sub.description}
+            </p>
+          </div>
+
+          {/* Price with beige underline */}
+          <div className="mt-3">
+            {sub.price !== null ? (
+              <div className="inline-block">
+                <span className="text-2xl font-black tracking-tight" style={{ color: BROWN.beige }}>
+                  ₹{sub.price}
+                </span>
+                <div
+                  className="h-[2px] rounded-full mt-0.5"
+                  style={{ background: `linear-gradient(to right, ${BROWN.beige}, ${BROWN.beigeAlt}80, transparent)` }}
+                />
+              </div>
+            ) : (
+              <span className="text-xs italic" style={{ color: BROWN.muted }}>Price on request</span>
+            )}
           </div>
         </div>
       </div>
