@@ -288,7 +288,7 @@ export const menuCategories: MenuCategory[] = [
         image: "/drinks/espresso.jpg",
       },
     ],
-    flavourNote: "Add any flavour shot for +₹30",
+    flavourNote: "Add any flavour shot for +₹20",
   },
   {
     id: "cafe-frappe",

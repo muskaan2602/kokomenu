@@ -426,20 +426,30 @@ export default function MenuContent() {
             {/* Flavour note */}
             {category.flavourNote && (
               <div
-                className="mt-4 rounded-xl p-4 flex items-start gap-3"
+                className="mt-4 rounded-xl p-4"
                 style={{
                   background: `linear-gradient(135deg, ${BROWN.bgDeep}, ${BROWN.bgMid}60)`,
                   border: `1px solid ${BROWN.border}50`,
                 }}
               >
-                <span style={{ color: BROWN.beige }} className="text-base shrink-0 mt-0.5">✦</span>
-                <div>
-                  <p className="text-[10px] font-black tracking-[0.3em] uppercase mb-1.5" style={{ color: BROWN.beige }}>
-                    Flavours Available
+                <div className="flex items-center gap-3 mb-3">
+                  <span style={{ color: BROWN.beige }} className="text-base">✦</span>
+                  <p className="text-[10px] font-black tracking-[0.3em] uppercase" style={{ color: BROWN.beige }}>
+                    Flavour Shots
                   </p>
-                  <p className="text-xs leading-relaxed" style={{ color: BROWN.text }}>
-                    {category.flavourNote}
-                  </p>
+                  <div className="inline-block ml-1">
+                    <span className="text-base font-black" style={{ color: BROWN.beige }}>+₹20</span>
+                    <div className="h-[2px] rounded-full mt-0.5"
+                         style={{ background: `linear-gradient(to right, ${BROWN.beige}, transparent)` }} />
+                  </div>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {flavours.map((f) => (
+                    <div key={f} className="px-3 py-1 rounded-lg"
+                         style={{ background: `linear-gradient(135deg, ${BROWN.beige}, ${BROWN.beigeAlt})`, boxShadow: "0 2px 6px rgba(0,0,0,0.25)" }}>
+                      <span className="font-bold text-xs tracking-wide" style={{ color: BROWN.bgDeep }}>{f}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
             )}
@@ -749,64 +759,6 @@ export default function MenuContent() {
           </div>
         </section>
 
-        {/* ── FLAVOUR SHOTS ── */}
-        <section id="flavours">
-          <div className="flex items-center gap-3 mb-6">
-            <div
-              className="w-11 h-11 rounded-xl flex items-center justify-center text-xl shrink-0"
-              style={{
-                background: `linear-gradient(135deg, ${BROWN.bgMid}, ${BROWN.border})`,
-                border: `1px solid ${BROWN.accent}`,
-              }}
-            >
-              🌿
-            </div>
-            <div>
-              <h2 className="text-3xl font-black tracking-wide leading-none" style={{ color: BROWN.beige }}>
-                Flavour Shots
-              </h2>
-              <div
-                className="h-[2px] mt-1.5 w-20 rounded-full"
-                style={{ background: `linear-gradient(to right, ${BROWN.beige}, transparent)` }}
-              />
-            </div>
-          </div>
-
-          <div
-            className="rounded-2xl p-5"
-            style={{
-              background: `linear-gradient(145deg, ${BROWN.bgMid}, ${BROWN.bgDeep})`,
-              border: `1px solid ${BROWN.border}80`,
-            }}
-          >
-            <div className="flex items-center gap-3 mb-5">
-              <span className="text-sm font-semibold" style={{ color: BROWN.text }}>
-                Add to any hot coffee
-              </span>
-              <div className="inline-block">
-                <span className="text-xl font-black" style={{ color: BROWN.beige }}>+₹30</span>
-                <div
-                  className="h-[2px] rounded-full mt-0.5"
-                  style={{ background: `linear-gradient(to right, ${BROWN.beige}, ${BROWN.beigeAlt}80, transparent)` }}
-                />
-              </div>
-            </div>
-            <div className="flex flex-wrap gap-2.5">
-              {flavours.map((f) => (
-                <div
-                  key={f}
-                  className="px-3 py-1.5 rounded-lg"
-                  style={{
-                    background: `linear-gradient(135deg, ${BROWN.beige}, ${BROWN.beigeAlt})`,
-                    boxShadow: "0 2px 8px rgba(0,0,0,0.3)",
-                  }}
-                >
-                  <span className="font-bold text-xs tracking-wide" style={{ color: BROWN.bgDeep }}>{f}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
       </div>
 
       {/* ── FOOTER ── */}
