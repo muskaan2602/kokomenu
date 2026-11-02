@@ -373,13 +373,13 @@ export const menuCategories: MenuCategory[] = [
       {
         name: "Peach Ice Tea",
         description: "Cool brewed tea with a sweet peach twist.",
-        price: null,
+        price: 129,
         image: "/drinks/peach_iced_tea.jpg",
       },
       {
         name: "Lemon Ice Tea",
         description: "Classic chilled tea with a zesty lemon finish.",
-        price: null,
+        price: 129,
         image: "/drinks/lemon_iced_tea.jpg",
       },
     ],
