@@ -3,7 +3,7 @@
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 import { useState } from "react";
-import { menuCategories, flavours, wraps, subs, mocktails, shakes, pizzas, burgers } from "@/app/_lib/menuData";
+import { menuCategories, flavours, wraps, subs, mocktails, shakes, pizzas, burgers, salads, sandwiches } from "@/app/_lib/menuData";
 
 // Brown from the actual menu images: #7B4A2D warm medium chocolate
 const BROWN = {
@@ -268,6 +268,16 @@ export default function MenuContent() {
             className="whitespace-nowrap text-[11px] font-bold px-4 py-2 rounded-full transition-all duration-300 tracking-wide"
             style={activeCategory === "burgers" ? { background: `linear-gradient(135deg, ${BROWN.beige}, ${BROWN.beigeAlt})`, color: BROWN.bgDeep, boxShadow: `0 0 14px ${BROWN.beige}50` } : { background: BROWN.bgMid, color: BROWN.muted, border: `1px solid ${BROWN.border}60` }}>
             🍔 Burgers
+          </a>
+          <a href="#salads" onClick={() => setActiveCategory("salads")}
+            className="whitespace-nowrap text-[11px] font-bold px-4 py-2 rounded-full transition-all duration-300 tracking-wide"
+            style={activeCategory === "salads" ? { background: `linear-gradient(135deg, ${BROWN.beige}, ${BROWN.beigeAlt})`, color: BROWN.bgDeep, boxShadow: `0 0 14px ${BROWN.beige}50` } : { background: BROWN.bgMid, color: BROWN.muted, border: `1px solid ${BROWN.border}60` }}>
+            🥗 Salads
+          </a>
+          <a href="#sandwiches" onClick={() => setActiveCategory("sandwiches")}
+            className="whitespace-nowrap text-[11px] font-bold px-4 py-2 rounded-full transition-all duration-300 tracking-wide"
+            style={activeCategory === "sandwiches" ? { background: `linear-gradient(135deg, ${BROWN.beige}, ${BROWN.beigeAlt})`, color: BROWN.bgDeep, boxShadow: `0 0 14px ${BROWN.beige}50` } : { background: BROWN.bgMid, color: BROWN.muted, border: `1px solid ${BROWN.border}60` }}>
+            🥪 Sandwiches
           </a>
         </div>
       </nav>
@@ -624,6 +634,62 @@ export default function MenuContent() {
           <div className="space-y-4">
             {burgers.filter(b => !b.isVeg).map(b => (
               <VegNonVegCard key={b.name} name={b.name} description={b.description} price={b.price} image={b.image} isVeg={b.isVeg} BROWN={BROWN} />
+            ))}
+          </div>
+        </section>
+
+        {/* ── SALADS SECTION ── */}
+        <section id="salads">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-11 h-11 rounded-xl flex items-center justify-center text-xl shrink-0"
+                 style={{ background: `linear-gradient(135deg, ${BROWN.bgMid}, ${BROWN.border})`, border: `1px solid ${BROWN.accent}`, boxShadow: `0 0 14px ${BROWN.accent}40` }}>🥗</div>
+            <div>
+              <h2 className="text-3xl font-black tracking-wide leading-none" style={{ color: BROWN.beige }}>Salads</h2>
+              <div className="h-[2px] mt-1.5 w-20 rounded-full" style={{ background: `linear-gradient(to right, ${BROWN.beige}, transparent)` }} />
+            </div>
+          </div>
+          <p className="text-[10px] font-black tracking-[0.3em] uppercase mb-3 flex items-center gap-2" style={{ color: BROWN.beige }}>
+            <span className="inline-block w-3 h-3 rounded-sm border-2 border-green-500" />Veg
+          </p>
+          <div className="space-y-4 mb-6">
+            {salads.filter(s => s.isVeg).map(s => (
+              <VegNonVegCard key={s.name} name={s.name} description={s.description} price={s.price} image={s.image} isVeg={s.isVeg} BROWN={BROWN} />
+            ))}
+          </div>
+          <p className="text-[10px] font-black tracking-[0.3em] uppercase mb-3 flex items-center gap-2" style={{ color: BROWN.beige }}>
+            <span className="inline-block w-3 h-3 rounded-sm border-2 border-red-500" />Non-Veg
+          </p>
+          <div className="space-y-4">
+            {salads.filter(s => !s.isVeg).map(s => (
+              <VegNonVegCard key={s.name} name={s.name} description={s.description} price={s.price} image={s.image} isVeg={s.isVeg} BROWN={BROWN} />
+            ))}
+          </div>
+        </section>
+
+        {/* ── SANDWICHES SECTION ── */}
+        <section id="sandwiches">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-11 h-11 rounded-xl flex items-center justify-center text-xl shrink-0"
+                 style={{ background: `linear-gradient(135deg, ${BROWN.bgMid}, ${BROWN.border})`, border: `1px solid ${BROWN.accent}`, boxShadow: `0 0 14px ${BROWN.accent}40` }}>🥪</div>
+            <div>
+              <h2 className="text-3xl font-black tracking-wide leading-none" style={{ color: BROWN.beige }}>Sandwiches</h2>
+              <div className="h-[2px] mt-1.5 w-20 rounded-full" style={{ background: `linear-gradient(to right, ${BROWN.beige}, transparent)` }} />
+            </div>
+          </div>
+          <p className="text-[10px] font-black tracking-[0.3em] uppercase mb-3 flex items-center gap-2" style={{ color: BROWN.beige }}>
+            <span className="inline-block w-3 h-3 rounded-sm border-2 border-green-500" />Veg
+          </p>
+          <div className="space-y-4 mb-6">
+            {sandwiches.filter(s => s.isVeg).map(s => (
+              <VegNonVegCard key={s.name} name={s.name} description={s.description} price={s.price} image={s.image} isVeg={s.isVeg} BROWN={BROWN} />
+            ))}
+          </div>
+          <p className="text-[10px] font-black tracking-[0.3em] uppercase mb-3 flex items-center gap-2" style={{ color: BROWN.beige }}>
+            <span className="inline-block w-3 h-3 rounded-sm border-2 border-red-500" />Non-Veg
+          </p>
+          <div className="space-y-4">
+            {sandwiches.filter(s => !s.isVeg).map(s => (
+              <VegNonVegCard key={s.name} name={s.name} description={s.description} price={s.price} image={s.image} isVeg={s.isVeg} BROWN={BROWN} />
             ))}
           </div>
         </section>

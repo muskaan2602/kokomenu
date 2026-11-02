@@ -469,6 +469,45 @@ export const pizzas: PizzaItem[] = [
   },
 ];
 
+export interface SaladItem {
+  name: string;
+  description: string;
+  price: number;
+  image: string;
+  isVeg: boolean;
+}
+
+export interface SandwichItem {
+  name: string;
+  description: string;
+  price: number;
+  image: string;
+  isVeg: boolean;
+}
+
+export const salads: SaladItem[] = [
+  { name: "Paneer Tikka Salad",        description: "Smoky tandoori paneer with fresh greens, veggies & zesty dressing.",           price: 158, image: "/salads/paneer_salad.jpg",           isVeg: true  },
+  { name: "Paneer Peri Peri Salad",    description: "Fiery peri peri paneer over crisp salad greens with a punchy sauce.",          price: 158, image: "/salads/paneer_salad.jpg",           isVeg: true  },
+  { name: "Krispy Paneer Salad",       description: "Crispy fried paneer strips on a bed of fresh greens with house dressing.",     price: 198, image: "/salads/paneer_salad.jpg",           isVeg: true  },
+  { name: "Hara Bhara Kebab Salad",    description: "Green spinach-pea kebabs over a vibrant salad with mint yogurt dressing.",    price: 198, image: "/salads/hara_bhara_salad.jpg",       isVeg: true  },
+  { name: "Falafel Salad",             description: "Crispy falafel over hummus, fresh greens, tomatoes & tahini drizzle.",         price: 198, image: "/salads/falafel_salad.jpg",          isVeg: true  },
+  { name: "Classic Sauté Veggies",     description: "Seasonal vegetables sautéed in garlic butter with herbs & seasoning.",        price: 199, image: "/salads/classic_saute_veggies.jpg",   isVeg: true  },
+  { name: "Paneer Sauté Veggies",      description: "Tender paneer with stir-fried vegetables in a rich buttery sauce.",            price: 239, image: "/salads/paneer_saute_veggies.jpg",   isVeg: true  },
+  { name: "Tandoori Chicken Salad",    description: "Grilled tandoori chicken over fresh greens with a cooling mint dressing.",    price: 188, image: "/salads/chicken_salad.jpg",          isVeg: false },
+  { name: "Peri Peri Chicken Salad",   description: "Spicy peri peri chicken on crisp greens with a tangy citrus dressing.",      price: 188, image: "/salads/chicken_salad.jpg",          isVeg: false },
+  { name: "Chicken Seekh Kebab Salad", description: "Succulent seekh kebab slices over a fresh garden salad with raita dressing.", price: 188, image: "/salads/chicken_salad.jpg",          isVeg: false },
+  { name: "Chicken Sauté Veggies",     description: "Tender chicken with stir-fried seasonal vegetables in a bold sauce.",         price: 249, image: "/salads/chicken_saute_veggies.jpg",  isVeg: false },
+];
+
+export const sandwiches: SandwichItem[] = [
+  { name: "Bombay Sandwich",        description: "Classic Mumbai street-style sandwich with potatoes, chutneys & masala.",   price: 119, image: "/sandwich/bombay_sandwich.jpg",       isVeg: true  },
+  { name: "Classic Veg Sandwich",   description: "Fresh vegetables, cheese & house sauce in toasted bread.",                 price: 139, image: "/sandwich/classic_veg_sandwich.jpg",   isVeg: true  },
+  { name: "Paneer Sandwich",        description: "Spiced paneer filling with veggies & mint chutney in toasted bread.",      price: 149, image: "/sandwich/paneer_sandwich.jpg",        isVeg: true  },
+  { name: "Two Tier Sandwich",      description: "A double-decker loaded sandwich with layers of fresh fillings & sauces.",  price: 159, image: "/sandwich/two_tier_sandwich.jpg",     isVeg: true  },
+  { name: "Mushroom Melt Sandwich", description: "Sautéed mushrooms with melted cheese in crispy toasted bread.",            price: 169, image: "/sandwich/mushroom_melt_sandwich.jpg", isVeg: true  },
+  { name: "Chicken Sandwich",       description: "Grilled chicken with cheese, veggies & smoky sauce in toasted bread.",     price: 169, image: "/sandwich/chicken_sandwich.jpg",      isVeg: false },
+];
+
 export const burgers: BurgerItem[] = [
   {
     name: "Aloo Patty Burger",
