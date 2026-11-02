@@ -414,3 +414,102 @@ export const shakes: ShakeItem[] = [
   { name: "Bubblegum Shake", description: "Fun pastel bubblegum shake, sweet & playful.", price: 149, image: "/shakes/bubblegum_shake.jpg" },
   { name: "Iced Chocolate Shake", description: "Classic rich chocolate shake served cold & thick.", price: 149, image: "/shakes/iced_chocolate_shake.jpg" },
 ];
+
+export interface PizzaItem {
+  name: string;
+  description: string;
+  price: number;
+  image: string;
+  isVeg: boolean;
+}
+
+export interface BurgerItem {
+  name: string;
+  description: string;
+  price: number;
+  image: string;
+  isVeg: boolean;
+}
+
+export const pizzas: PizzaItem[] = [
+  {
+    name: "Farm House Pizza",
+    description: "Loaded with fresh farm veggies, capsicum, onions & olives on a rich tomato base.",
+    price: 348,
+    image: "/pizzas/veggie_pizza.jpg",
+    isVeg: true,
+  },
+  {
+    name: "Paneer Tikka Pizza",
+    description: "Smoky tandoori paneer, peppers & onions with mint chutney drizzle.",
+    price: 368,
+    image: "/pizzas/paneer_tikka_pizza.jpg",
+    isVeg: true,
+  },
+  {
+    name: "Margherita Pizza",
+    description: "Classic Italian pizza with fresh mozzarella, tomato sauce & basil.",
+    price: 298,
+    image: "/pizzas/margherita_pizza.jpg",
+    isVeg: true,
+  },
+  {
+    name: "Chicken Kabab Pizza",
+    description: "Juicy chicken kabab pieces with peppers, onions & spiced tomato base.",
+    price: 378,
+    image: "/pizzas/bbq_chicken_pizza.jpg",
+    isVeg: false,
+  },
+  {
+    name: "Chicken Tikka Pizza",
+    description: "Marinated tandoori chicken tikka with capsicum, onions & creamy sauce.",
+    price: 388,
+    image: "/pizzas/chicken_tikka_pizza.jpg",
+    isVeg: false,
+  },
+];
+
+export const burgers: BurgerItem[] = [
+  {
+    name: "Aloo Patty Burger",
+    description: "Crispy spiced potato patty with lettuce, tomato & tangy sauces.",
+    price: 119,
+    image: "/burgers/veggie_burger.jpg",
+    isVeg: true,
+  },
+  {
+    name: "Falafel Burger",
+    description: "Crispy falafel patty with hummus, pickles & fresh greens.",
+    price: 139,
+    image: "/burgers/paneer_burger.jpg",
+    isVeg: true,
+  },
+  {
+    name: "Spicy Korean Paneer Burger",
+    description: "Grilled paneer with fiery Korean sauce, slaw & pickled veggies.",
+    price: 159,
+    image: "/burgers/kimchi_burger.jpg",
+    isVeg: true,
+  },
+  {
+    name: "Smashed Mushroom Burger",
+    description: "Juicy smashed mushroom patty with melted cheese & garlic aioli.",
+    price: 169,
+    image: "/burgers/mushroom_burger.jpg",
+    isVeg: true,
+  },
+  {
+    name: "Krispy Chicken Burger",
+    description: "Crunchy fried chicken with coleslaw, pickles & smoky mayo.",
+    price: 159,
+    image: "/burgers/crispy_chicken_burger.jpg",
+    isVeg: false,
+  },
+  {
+    name: "Chicken Smashed Burger",
+    description: "Double smashed chicken patty with cheese, caramelised onions & secret sauce.",
+    price: 199,
+    image: "/burgers/chicken_burger.jpg",
+    isVeg: false,
+  },
+];
