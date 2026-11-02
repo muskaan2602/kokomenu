@@ -569,6 +569,26 @@ export const sides: SideItem[] = [
   { name: "Chicken Nachos",             description: "Loaded nachos with seasoned chicken, cheese sauce & jalapeños.",              price: 189, image: "/sides/chicken_nachos.jpg",             isVeg: false },
 ];
 
+export interface DessertItem {
+  name: string;
+  description: string;
+  price: number;
+  image: string;
+}
+
+export const desserts: DessertItem[] = [
+  { name: "Plain New York Cheesecake",   description: "Classic New York style baked cheesecake — smooth, dense & indulgent.",           price: 179, image: "/desserts/plain_croissant.jpg"          },
+  { name: "Lotus Biscoff Cheesecake",    description: "Creamy cheesecake with a crunchy Lotus Biscoff base & caramel drizzle.",         price: 209, image: "/desserts/lotus_biscoff_cheesecake.jpg" },
+  { name: "Nutella Cheesecake",          description: "Velvety cheesecake with a rich Nutella swirl & hazelnut crunch.",                 price: 199, image: "/desserts/nutella_cheesecake.jpg"       },
+  { name: "Blueberry Cheesecake",        description: "Classic cheesecake topped with a fresh blueberry compote.",                       price: 199, image: "/desserts/blueberry_cheesecake.jpg"     },
+  { name: "Strawberry Cheesecake",       description: "Creamy cheesecake with a luscious strawberry topping & biscuit base.",            price: 199, image: "/desserts/strawberry_cheesecake.jpg"   },
+  { name: "Pistachio Cheesecake",        description: "Elegant cheesecake with pistachio cream, rose & a buttery base.",                 price: 209, image: "/desserts/pistachio_cheesecake.jpg"    },
+  { name: "Butter Croissant",            description: "Freshly baked flaky butter croissant — golden, layered & classic.",               price: 139, image: "/desserts/butter_croissant.jpg"         },
+  { name: "Nutella Croissant",           description: "Flaky croissant generously filled with rich Nutella hazelnut spread.",            price: 169, image: "/desserts/nutella_croissant.jpg"       },
+  { name: "Tiramisu",                    description: "Classic Italian tiramisu — espresso-soaked layers with mascarpone cream.",        price: 279, image: "/desserts/tiramisu.jpg"                },
+  { name: "Brownie",                     description: "Rich fudgy chocolate brownie — warm, gooey & irresistible.",                      price: 59,  image: "/desserts/brownie.jpg"                  },
+];
+
 export const burgers: BurgerItem[] = [
   {
     name: "Aloo Patty Burger",

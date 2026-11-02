@@ -3,7 +3,7 @@
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 import { useState } from "react";
-import { menuCategories, flavours, wraps, subs, mocktails, shakes, pizzas, burgers, salads, sandwiches, pastas, sides } from "@/app/_lib/menuData";
+import { menuCategories, flavours, wraps, subs, mocktails, shakes, pizzas, burgers, salads, sandwiches, pastas, sides, desserts } from "@/app/_lib/menuData";
 
 // Brown from the actual menu images: #7B4A2D warm medium chocolate
 const BROWN = {
@@ -288,6 +288,11 @@ export default function MenuContent() {
             className="whitespace-nowrap text-[11px] font-bold px-4 py-2 rounded-full transition-all duration-300 tracking-wide"
             style={activeCategory === "sides" ? { background: `linear-gradient(135deg, ${BROWN.beige}, ${BROWN.beigeAlt})`, color: BROWN.bgDeep, boxShadow: `0 0 14px ${BROWN.beige}50` } : { background: BROWN.bgMid, color: BROWN.muted, border: `1px solid ${BROWN.border}60` }}>
             🍟 Sides
+          </a>
+          <a href="#desserts" onClick={() => setActiveCategory("desserts")}
+            className="whitespace-nowrap text-[11px] font-bold px-4 py-2 rounded-full transition-all duration-300 tracking-wide"
+            style={activeCategory === "desserts" ? { background: `linear-gradient(135deg, ${BROWN.beige}, ${BROWN.beigeAlt})`, color: BROWN.bgDeep, boxShadow: `0 0 14px ${BROWN.beige}50` } : { background: BROWN.bgMid, color: BROWN.muted, border: `1px solid ${BROWN.border}60` }}>
+            🍰 Desserts
           </a>
         </div>
       </nav>
@@ -760,6 +765,24 @@ export default function MenuContent() {
         </section>
 
       </div>
+
+      {/* ── DESSERTS SECTION ── */}
+      <section id="desserts" className="relative z-10 max-w-xl mx-auto px-4 pb-24"
+               style={{ borderLeft: `1px solid ${BROWN.border}50`, borderRight: `1px solid ${BROWN.border}50` }}>
+        <div className="flex items-center gap-3 mb-6 pt-2">
+          <div className="w-11 h-11 rounded-xl flex items-center justify-center text-xl shrink-0"
+               style={{ background: `linear-gradient(135deg, ${BROWN.bgMid}, ${BROWN.border})`, border: `1px solid ${BROWN.accent}`, boxShadow: `0 0 14px ${BROWN.accent}40` }}>🍰</div>
+          <div>
+            <h2 className="text-3xl font-black tracking-wide leading-none" style={{ color: BROWN.beige }}>Desserts</h2>
+            <div className="h-[2px] mt-1.5 w-20 rounded-full" style={{ background: `linear-gradient(to right, ${BROWN.beige}, transparent)` }} />
+          </div>
+        </div>
+        <div className="space-y-4">
+          {desserts.map(d => (
+            <DrinkSimpleCard key={d.name} name={d.name} description={d.description} price={d.price} image={d.image} BROWN={BROWN} />
+          ))}
+        </div>
+      </section>
 
       {/* ── FOOTER ── */}
       <footer
