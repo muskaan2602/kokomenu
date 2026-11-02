@@ -37,7 +37,7 @@ export const wraps: WrapItem[] = [
     description: "Spiced paneer with fiery peri peri sauce, lettuce & fresh veggies.",
     regular: null,
     jumbo: null,
-    image: "/wraps/paneer_peri.jpg",
+    image: "/wraps/paneer_periperi.jpg",
     isVeg: true,
   },
   {
@@ -53,7 +53,7 @@ export const wraps: WrapItem[] = [
     description: "Crispy potato tikki with chutneys, onions & fresh herbs.",
     regular: null,
     jumbo: null,
-    image: "/wraps/aaloo_tikki.jpg",
+    image: "/wraps/Aloo_Tikki_Wrap.jpg",
     isVeg: true,
   },
   {
