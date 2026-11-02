@@ -372,3 +372,45 @@ export const flavours = [
   "Rose",
   "Cheese Cake",
 ];
+
+export interface MocktailItem {
+  name: string;
+  description: string;
+  price: number;
+  image: string;
+}
+
+export interface ShakeItem {
+  name: string;
+  description: string;
+  price: number;
+  image: string;
+}
+
+export const mocktails: MocktailItem[] = [
+  { name: "Blueberry", description: "Fresh blueberry cooler bursting with fruity sweetness.", price: 109, image: "/mockatails/blueberry.jpg" },
+  { name: "Green Mint", description: "Refreshing mint cooler with a cool zesty finish.", price: 109, image: "/mockatails/green_mint.jpg" },
+  { name: "Green Apple", description: "Crisp green apple mocktail, tangy & refreshing.", price: 109, image: "/mockatails/green_apple.jpg" },
+  { name: "Peach Garden", description: "Sweet peach with a garden-fresh floral twist.", price: 129, image: "/mockatails/peach_garden.jpg" },
+  { name: "Watermelon", description: "Chilled watermelon cooler, light & summery.", price: 129, image: "/mockatails/watermelon.jpg" },
+  { name: "Masala Lemonade", description: "Spiced lemonade with a bold Indian masala kick.", price: 139, image: "/mockatails/masala_lemonade.jpg" },
+  { name: "Bubblegum", description: "Fun & fruity bubblegum cooler with a pop of colour.", price: 139, image: "/mockatails/bubblegum.jpg" },
+  { name: "Anardana", description: "Classic pomegranate cooler with a tangy depth.", price: 139, image: "/mockatails/anadrana.jpg" },
+  { name: "Mango Passion Fruit", description: "Tropical mango meets passion fruit in a refreshing blend.", price: 129, image: "/mockatails/mango_passion_fruit.jpg" },
+  { name: "Fresh Lime", description: "Simple, zesty fresh lime cooler. Classic and clean.", price: 99, image: "/mockatails/fresh_lime.jpg" },
+  { name: "Aam Panna", description: "Traditional raw mango cooler with spices. Desi & delicious.", price: 129, image: "/mockatails/aam_panna.jpg" },
+];
+
+export const shakes: ShakeItem[] = [
+  { name: "Oreo Shake", description: "Thick creamy shake loaded with crushed Oreo cookies.", price: 139, image: "/shakes/oreo_shake.jpg" },
+  { name: "Nutella Shake", description: "Rich & indulgent Nutella hazelnut chocolate shake.", price: 199, image: "/shakes/nutella_shake.jpg" },
+  { name: "Kit Kat Shake", description: "Creamy shake with crunchy Kit Kat pieces blended in.", price: 159, image: "/shakes/kitkat_shake.jpg" },
+  { name: "Banoffee Shake", description: "Banana & toffee blended into a dreamy creamy shake.", price: 149, image: "/shakes/banoffee_shake.jpg" },
+  { name: "Lotus Biscoff Shake", description: "Velvety shake with caramelised Lotus Biscoff crunch.", price: 199, image: "/shakes/lotus_biscoff_shake.jpg" },
+  { name: "Mix Berry Shake", description: "A blend of fresh berries in a thick, fruity shake.", price: 179, image: "/shakes/mix_berry_shake.jpg" },
+  { name: "Strawberry Shake", description: "Classic thick strawberry shake, sweet & creamy.", price: 179, image: "/shakes/strawberry_shake.jpg" },
+  { name: "Mango Colada Shake", description: "Tropical mango with a creamy colada twist.", price: 159, image: "/shakes/mango_colada_shake.jpg" },
+  { name: "Dubai Kunafa Shake", description: "Inspired by viral Dubai chocolate kunafa — rich & indulgent.", price: 199, image: "/shakes/dubai_kunafa_shake.jpg" },
+  { name: "Bubblegum Shake", description: "Fun pastel bubblegum shake, sweet & playful.", price: 149, image: "/shakes/bubblegum_shake.jpg" },
+  { name: "Iced Chocolate Shake", description: "Classic rich chocolate shake served cold & thick.", price: 149, image: "/shakes/iced_chocolate_shake.jpg" },
+];
