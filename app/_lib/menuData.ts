@@ -577,7 +577,7 @@ export interface DessertItem {
 }
 
 export const desserts: DessertItem[] = [
-  { name: "Plain New York Cheesecake",   description: "Classic New York style baked cheesecake — smooth, dense & indulgent.",           price: 179, image: "/desserts/plain_croissant.jpg"          },
+  { name: "Plain New York Cheesecake",   description: "Classic New York style baked cheesecake — smooth, dense & indulgent.",           price: 179, image: "/desserts/strawberry_cheesecake.jpg"   },
   { name: "Lotus Biscoff Cheesecake",    description: "Creamy cheesecake with a crunchy Lotus Biscoff base & caramel drizzle.",         price: 209, image: "/desserts/lotus_biscoff_cheesecake.jpg" },
   { name: "Nutella Cheesecake",          description: "Velvety cheesecake with a rich Nutella swirl & hazelnut crunch.",                 price: 199, image: "/desserts/nutella_cheesecake.jpg"       },
   { name: "Blueberry Cheesecake",        description: "Classic cheesecake topped with a fresh blueberry compote.",                       price: 199, image: "/desserts/blueberry_cheesecake.jpg"     },
