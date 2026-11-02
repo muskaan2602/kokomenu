@@ -35,9 +35,81 @@ export default function MenuContent() {
              style={{ background: "radial-gradient(circle, #D4A96A 0%, transparent 70%)", filter: "blur(50px)" }} />
       </div>
 
+      {/* ── DECORATIVE SIDE PANELS ── */}
+      {/* Left side panel */}
+      <div className="fixed left-0 top-0 bottom-0 w-[calc((100vw-576px)/2)] pointer-events-none z-10 hidden lg:flex flex-col items-end pr-6 pt-16 gap-0 overflow-hidden">
+        {/* Vertical line */}
+        <div className="absolute right-4 top-0 bottom-0 w-px"
+             style={{ background: "linear-gradient(to bottom, transparent 5%, #3D2010 20%, #5C3018 50%, #3D2010 80%, transparent 95%)" }} />
+        {/* Top diamond ornament */}
+        <div className="absolute right-[10px] top-[10%] w-3 h-3 rotate-45 rounded-sm"
+             style={{ background: "linear-gradient(135deg, #C8793A, #E8C170)", boxShadow: "0 0 8px rgba(200,121,58,0.5)" }} />
+        {/* Coffee bean dots pattern */}
+        {[18, 26, 34, 42, 50, 58, 66, 74, 82].map((pct) => (
+          <div key={pct} className="absolute right-[13px] w-1.5 h-2.5 rounded-full opacity-40"
+               style={{ top: `${pct}%`, background: "linear-gradient(135deg, #8B4513, #C8793A)", transform: "rotate(30deg)" }} />
+        ))}
+        {/* Middle diamond */}
+        <div className="absolute right-[10px] top-[50%] -translate-y-1/2 w-3 h-3 rotate-45 rounded-sm"
+             style={{ background: "linear-gradient(135deg, #C8793A, #E8C170)", boxShadow: "0 0 8px rgba(200,121,58,0.5)" }} />
+        {/* Bottom diamond ornament */}
+        <div className="absolute right-[10px] bottom-[10%] w-3 h-3 rotate-45 rounded-sm"
+             style={{ background: "linear-gradient(135deg, #C8793A, #E8C170)", boxShadow: "0 0 8px rgba(200,121,58,0.5)" }} />
+        {/* Floating text rotated */}
+        <div className="absolute right-8 top-1/2 -translate-y-1/2 flex flex-col items-center gap-3 opacity-20">
+          <p className="text-[#E8C170] text-[10px] tracking-[0.5em] uppercase font-bold"
+             style={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}>
+            Est. Cafe Frappe
+          </p>
+        </div>
+        {/* Warm glow near top */}
+        <div className="absolute right-0 top-1/4 w-24 h-40 opacity-20 rounded-full"
+             style={{ background: "radial-gradient(ellipse at right, #C8793A, transparent)", filter: "blur(20px)" }} />
+      </div>
+
+      {/* Right side panel */}
+      <div className="fixed right-0 top-0 bottom-0 w-[calc((100vw-576px)/2)] pointer-events-none z-10 hidden lg:flex flex-col items-start pl-6 pt-16 overflow-hidden">
+        {/* Vertical line */}
+        <div className="absolute left-4 top-0 bottom-0 w-px"
+             style={{ background: "linear-gradient(to bottom, transparent 5%, #3D2010 20%, #5C3018 50%, #3D2010 80%, transparent 95%)" }} />
+        {/* Top diamond ornament */}
+        <div className="absolute left-[10px] top-[10%] w-3 h-3 rotate-45 rounded-sm"
+             style={{ background: "linear-gradient(135deg, #C8793A, #E8C170)", boxShadow: "0 0 8px rgba(200,121,58,0.5)" }} />
+        {/* Coffee bean dots */}
+        {[18, 26, 34, 42, 50, 58, 66, 74, 82].map((pct) => (
+          <div key={pct} className="absolute left-[13px] w-1.5 h-2.5 rounded-full opacity-40"
+               style={{ top: `${pct}%`, background: "linear-gradient(135deg, #8B4513, #C8793A)", transform: "rotate(-30deg)" }} />
+        ))}
+        {/* Middle diamond */}
+        <div className="absolute left-[10px] top-[50%] -translate-y-1/2 w-3 h-3 rotate-45 rounded-sm"
+             style={{ background: "linear-gradient(135deg, #C8793A, #E8C170)", boxShadow: "0 0 8px rgba(200,121,58,0.5)" }} />
+        {/* Bottom diamond */}
+        <div className="absolute left-[10px] bottom-[10%] w-3 h-3 rotate-45 rounded-sm"
+             style={{ background: "linear-gradient(135deg, #C8793A, #E8C170)", boxShadow: "0 0 8px rgba(200,121,58,0.5)" }} />
+        {/* Rotated text */}
+        <div className="absolute left-8 top-1/2 -translate-y-1/2 flex flex-col items-center gap-3 opacity-20">
+          <p className="text-[#E8C170] text-[10px] tracking-[0.5em] uppercase font-bold"
+             style={{ writingMode: "vertical-rl" }}>
+            Premium Quality
+          </p>
+        </div>
+        {/* Warm glow near bottom */}
+        <div className="absolute left-0 bottom-1/4 w-24 h-40 opacity-20 rounded-full"
+             style={{ background: "radial-gradient(ellipse at left, #C8793A, transparent)", filter: "blur(20px)" }} />
+      </div>
+
       {/* ── HERO HEADER ── */}
-      <header className="relative z-10 px-5 pt-12 pb-6">
-        <div className="max-w-xl mx-auto">
+      <header className="relative z-10 px-5 pt-12 pb-6"
+              style={{ borderLeft: "1px solid rgba(92,48,24,0.35)", borderRight: "1px solid rgba(92,48,24,0.35)",
+                       maxWidth: "576px", margin: "0 auto", width: "100%" }}>
+
+        {/* Top corner ornaments */}
+        <div className="absolute top-3 left-3 w-4 h-4 pointer-events-none"
+             style={{ borderTop: "2px solid #8B4513", borderLeft: "2px solid #8B4513", borderRadius: "3px 0 0 0" }} />
+        <div className="absolute top-3 right-3 w-4 h-4 pointer-events-none"
+             style={{ borderTop: "2px solid #8B4513", borderRight: "2px solid #8B4513", borderRadius: "0 3px 0 0" }} />
+
+        <div className="relative">
           {/* Top row: branding + table badge */}
           <div className="flex items-start justify-between mb-6">
             <div>
@@ -95,6 +167,11 @@ export default function MenuContent() {
           background: "rgba(14, 7, 4, 0.94)",
           backdropFilter: "blur(20px)",
           borderColor: "#3D2010",
+          borderLeft: "1px solid rgba(92,48,24,0.35)",
+          borderRight: "1px solid rgba(92,48,24,0.35)",
+          maxWidth: "576px",
+          margin: "0 auto",
+          width: "100%",
         }}
       >
         <div className="max-w-xl mx-auto flex gap-2.5 w-max">
@@ -128,7 +205,12 @@ export default function MenuContent() {
       </nav>
 
       {/* ── MENU SECTIONS ── */}
-      <div className="relative z-10 max-w-xl mx-auto px-4 py-8 pb-24 space-y-16">
+      <div className="relative z-10 max-w-xl mx-auto px-4 py-8 pb-24 space-y-16"
+           style={{
+             borderLeft: "1px solid rgba(92,48,24,0.35)",
+             borderRight: "1px solid rgba(92,48,24,0.35)",
+           }}
+      >
         {menuCategories.map((category) => (
           <section key={category.id} id={category.id}>
 
@@ -376,8 +458,20 @@ export default function MenuContent() {
       {/* ── FOOTER ── */}
       <footer
         className="relative z-10 text-center py-8"
-        style={{ borderTop: "1px solid #2A1608" }}
+        style={{
+          borderTop: "1px solid #2A1608",
+          borderLeft: "1px solid rgba(92,48,24,0.35)",
+          borderRight: "1px solid rgba(92,48,24,0.35)",
+          maxWidth: "576px",
+          margin: "0 auto",
+          width: "100%",
+        }}
       >
+        {/* Bottom corner ornaments */}
+        <div className="absolute bottom-3 left-3 w-4 h-4 pointer-events-none"
+             style={{ borderBottom: "2px solid #8B4513", borderLeft: "2px solid #8B4513", borderRadius: "0 0 0 3px" }} />
+        <div className="absolute bottom-3 right-3 w-4 h-4 pointer-events-none"
+             style={{ borderBottom: "2px solid #8B4513", borderRight: "2px solid #8B4513", borderRadius: "0 0 3px 0" }} />
         <div className="flex items-center justify-center gap-4 mb-2">
           <div className="h-px w-16" style={{ background: "linear-gradient(to right, transparent, #8B4513)" }} />
           <span
