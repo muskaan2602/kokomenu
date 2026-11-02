@@ -191,109 +191,36 @@ export default function MenuContent() {
         }}
       >
         <div className="flex gap-2 w-max">
+          {/* ── DRINKS ── */}
           {menuCategories.map((cat) => {
             const isActive = activeCategory === cat.id;
             return (
-              <a
-                key={cat.id}
-                href={`#${cat.id}`}
-                onClick={() => setActiveCategory(cat.id)}
+              <a key={cat.id} href={`#${cat.id}`} onClick={() => setActiveCategory(cat.id)}
                 className="whitespace-nowrap text-[11px] font-bold px-4 py-2 rounded-full transition-all duration-300 tracking-wide"
-                style={
-                  isActive
-                    ? {
-                        background: `linear-gradient(135deg, ${BROWN.beige}, ${BROWN.beigeAlt})`,
-                        color: BROWN.bgDeep,
-                        boxShadow: `0 0 14px ${BROWN.beige}50`,
-                      }
-                    : {
-                        background: BROWN.bgMid,
-                        color: BROWN.muted,
-                        border: `1px solid ${BROWN.border}60`,
-                      }
-                }
-              >
+                style={isActive ? { background: `linear-gradient(135deg, ${BROWN.beige}, ${BROWN.beigeAlt})`, color: BROWN.bgDeep, boxShadow: `0 0 14px ${BROWN.beige}50` } : { background: BROWN.bgMid, color: BROWN.muted, border: `1px solid ${BROWN.border}60` }}>
                 {cat.icon} {cat.title}
               </a>
             );
           })}
-          <a
-            href="#wraps"
-            onClick={() => setActiveCategory("wraps")}
-            className="whitespace-nowrap text-[11px] font-bold px-4 py-2 rounded-full transition-all duration-300 tracking-wide"
-            style={
-              activeCategory === "wraps"
-                ? {
-                    background: `linear-gradient(135deg, ${BROWN.beige}, ${BROWN.beigeAlt})`,
-                    color: BROWN.bgDeep,
-                    boxShadow: `0 0 14px ${BROWN.beige}50`,
-                  }
-                : {
-                    background: BROWN.bgMid,
-                    color: BROWN.muted,
-                    border: `1px solid ${BROWN.border}60`,
-                  }
-            }
-          >
-            🌯 Wraps
-          </a>
-          <a
-            href="#subs"
-            onClick={() => setActiveCategory("subs")}
-            className="whitespace-nowrap text-[11px] font-bold px-4 py-2 rounded-full transition-all duration-300 tracking-wide"
-            style={
-              activeCategory === "subs"
-                ? { background: `linear-gradient(135deg, ${BROWN.beige}, ${BROWN.beigeAlt})`, color: BROWN.bgDeep, boxShadow: `0 0 14px ${BROWN.beige}50` }
-                : { background: BROWN.bgMid, color: BROWN.muted, border: `1px solid ${BROWN.border}60` }
-            }
-          >
-            🥖 Subs
-          </a>
-          <a href="#mocktails" onClick={() => setActiveCategory("mocktails")}
-            className="whitespace-nowrap text-[11px] font-bold px-4 py-2 rounded-full transition-all duration-300 tracking-wide"
-            style={activeCategory === "mocktails" ? { background: `linear-gradient(135deg, ${BROWN.beige}, ${BROWN.beigeAlt})`, color: BROWN.bgDeep, boxShadow: `0 0 14px ${BROWN.beige}50` } : { background: BROWN.bgMid, color: BROWN.muted, border: `1px solid ${BROWN.border}60` }}>
-            🍹 Mocktails
-          </a>
-          <a href="#shakes" onClick={() => setActiveCategory("shakes")}
-            className="whitespace-nowrap text-[11px] font-bold px-4 py-2 rounded-full transition-all duration-300 tracking-wide"
-            style={activeCategory === "shakes" ? { background: `linear-gradient(135deg, ${BROWN.beige}, ${BROWN.beigeAlt})`, color: BROWN.bgDeep, boxShadow: `0 0 14px ${BROWN.beige}50` } : { background: BROWN.bgMid, color: BROWN.muted, border: `1px solid ${BROWN.border}60` }}>
-            🥤 Shakes
-          </a>
-          <a href="#pizzas" onClick={() => setActiveCategory("pizzas")}
-            className="whitespace-nowrap text-[11px] font-bold px-4 py-2 rounded-full transition-all duration-300 tracking-wide"
-            style={activeCategory === "pizzas" ? { background: `linear-gradient(135deg, ${BROWN.beige}, ${BROWN.beigeAlt})`, color: BROWN.bgDeep, boxShadow: `0 0 14px ${BROWN.beige}50` } : { background: BROWN.bgMid, color: BROWN.muted, border: `1px solid ${BROWN.border}60` }}>
-            🍕 Pizzas
-          </a>
-          <a href="#burgers" onClick={() => setActiveCategory("burgers")}
-            className="whitespace-nowrap text-[11px] font-bold px-4 py-2 rounded-full transition-all duration-300 tracking-wide"
-            style={activeCategory === "burgers" ? { background: `linear-gradient(135deg, ${BROWN.beige}, ${BROWN.beigeAlt})`, color: BROWN.bgDeep, boxShadow: `0 0 14px ${BROWN.beige}50` } : { background: BROWN.bgMid, color: BROWN.muted, border: `1px solid ${BROWN.border}60` }}>
-            🍔 Burgers
-          </a>
-          <a href="#salads" onClick={() => setActiveCategory("salads")}
-            className="whitespace-nowrap text-[11px] font-bold px-4 py-2 rounded-full transition-all duration-300 tracking-wide"
-            style={activeCategory === "salads" ? { background: `linear-gradient(135deg, ${BROWN.beige}, ${BROWN.beigeAlt})`, color: BROWN.bgDeep, boxShadow: `0 0 14px ${BROWN.beige}50` } : { background: BROWN.bgMid, color: BROWN.muted, border: `1px solid ${BROWN.border}60` }}>
-            🥗 Salads
-          </a>
-          <a href="#sandwiches" onClick={() => setActiveCategory("sandwiches")}
-            className="whitespace-nowrap text-[11px] font-bold px-4 py-2 rounded-full transition-all duration-300 tracking-wide"
-            style={activeCategory === "sandwiches" ? { background: `linear-gradient(135deg, ${BROWN.beige}, ${BROWN.beigeAlt})`, color: BROWN.bgDeep, boxShadow: `0 0 14px ${BROWN.beige}50` } : { background: BROWN.bgMid, color: BROWN.muted, border: `1px solid ${BROWN.border}60` }}>
-            🥪 Sandwiches
-          </a>
-          <a href="#pasta" onClick={() => setActiveCategory("pasta")}
-            className="whitespace-nowrap text-[11px] font-bold px-4 py-2 rounded-full transition-all duration-300 tracking-wide"
-            style={activeCategory === "pasta" ? { background: `linear-gradient(135deg, ${BROWN.beige}, ${BROWN.beigeAlt})`, color: BROWN.bgDeep, boxShadow: `0 0 14px ${BROWN.beige}50` } : { background: BROWN.bgMid, color: BROWN.muted, border: `1px solid ${BROWN.border}60` }}>
-            🍝 Pasta
-          </a>
-          <a href="#sides" onClick={() => setActiveCategory("sides")}
-            className="whitespace-nowrap text-[11px] font-bold px-4 py-2 rounded-full transition-all duration-300 tracking-wide"
-            style={activeCategory === "sides" ? { background: `linear-gradient(135deg, ${BROWN.beige}, ${BROWN.beigeAlt})`, color: BROWN.bgDeep, boxShadow: `0 0 14px ${BROWN.beige}50` } : { background: BROWN.bgMid, color: BROWN.muted, border: `1px solid ${BROWN.border}60` }}>
-            🍟 Sides
-          </a>
-          <a href="#desserts" onClick={() => setActiveCategory("desserts")}
-            className="whitespace-nowrap text-[11px] font-bold px-4 py-2 rounded-full transition-all duration-300 tracking-wide"
-            style={activeCategory === "desserts" ? { background: `linear-gradient(135deg, ${BROWN.beige}, ${BROWN.beigeAlt})`, color: BROWN.bgDeep, boxShadow: `0 0 14px ${BROWN.beige}50` } : { background: BROWN.bgMid, color: BROWN.muted, border: `1px solid ${BROWN.border}60` }}>
-            🍰 Desserts
-          </a>
+          {[
+            { id: "mocktails", label: "🍹 Mocktails" },
+            { id: "shakes",    label: "🥤 Shakes"    },
+            { id: "wraps",     label: "🌯 Wraps"     },
+            { id: "subs",      label: "🥖 Subs"      },
+            { id: "pizzas",    label: "🍕 Pizzas"    },
+            { id: "burgers",   label: "🍔 Burgers"   },
+            { id: "salads",    label: "🥗 Salads"    },
+            { id: "sandwiches",label: "🥪 Sandwiches"},
+            { id: "pasta",     label: "🍝 Pasta"     },
+            { id: "sides",     label: "🍟 Sides"     },
+            { id: "desserts",  label: "🍰 Desserts"  },
+          ].map(({ id, label }) => (
+            <a key={id} href={`#${id}`} onClick={() => setActiveCategory(id)}
+              className="whitespace-nowrap text-[11px] font-bold px-4 py-2 rounded-full transition-all duration-300 tracking-wide"
+              style={activeCategory === id ? { background: `linear-gradient(135deg, ${BROWN.beige}, ${BROWN.beigeAlt})`, color: BROWN.bgDeep, boxShadow: `0 0 14px ${BROWN.beige}50` } : { background: BROWN.bgMid, color: BROWN.muted, border: `1px solid ${BROWN.border}60` }}>
+              {label}
+            </a>
+          ))}
         </div>
       </nav>
 
@@ -461,6 +388,44 @@ export default function MenuContent() {
           </section>
         ))}
 
+        {/* ── MOCKTAILS SECTION ── */}
+        <section id="mocktails">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-11 h-11 rounded-xl flex items-center justify-center text-xl shrink-0"
+                 style={{ background: `linear-gradient(135deg, ${BROWN.bgMid}, ${BROWN.border})`, border: `1px solid ${BROWN.accent}`, boxShadow: `0 0 14px ${BROWN.accent}40` }}>
+              🍹
+            </div>
+            <div>
+              <h2 className="text-3xl font-black tracking-wide leading-none" style={{ color: BROWN.beige }}>Mocktails</h2>
+              <div className="h-[2px] mt-1.5 w-20 rounded-full" style={{ background: `linear-gradient(to right, ${BROWN.beige}, transparent)` }} />
+            </div>
+          </div>
+          <div className="space-y-4">
+            {mocktails.map((item) => (
+              <DrinkSimpleCard key={item.name} name={item.name} description={item.description} price={item.price} image={item.image} BROWN={BROWN} />
+            ))}
+          </div>
+        </section>
+
+        {/* ── SHAKES SECTION ── */}
+        <section id="shakes">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-11 h-11 rounded-xl flex items-center justify-center text-xl shrink-0"
+                 style={{ background: `linear-gradient(135deg, ${BROWN.bgMid}, ${BROWN.border})`, border: `1px solid ${BROWN.accent}`, boxShadow: `0 0 14px ${BROWN.accent}40` }}>
+              🥤
+            </div>
+            <div>
+              <h2 className="text-3xl font-black tracking-wide leading-none" style={{ color: BROWN.beige }}>Shakes</h2>
+              <div className="h-[2px] mt-1.5 w-20 rounded-full" style={{ background: `linear-gradient(to right, ${BROWN.beige}, transparent)` }} />
+            </div>
+          </div>
+          <div className="space-y-4">
+            {shakes.map((item) => (
+              <DrinkSimpleCard key={item.name} name={item.name} description={item.description} price={item.price} image={item.image} BROWN={BROWN} />
+            ))}
+          </div>
+        </section>
+
         {/* ── WRAPS SECTION ── */}
         <section id="wraps">
           <div className="flex items-center gap-3 mb-6">
@@ -565,44 +530,6 @@ export default function MenuContent() {
           <div className="space-y-4">
             {subs.filter(s => !s.isVeg).map((sub) => (
               <SubCard key={sub.name} sub={sub} BROWN={BROWN} />
-            ))}
-          </div>
-        </section>
-
-        {/* ── MOCKTAILS SECTION ── */}
-        <section id="mocktails">
-          <div className="flex items-center gap-3 mb-6">
-            <div className="w-11 h-11 rounded-xl flex items-center justify-center text-xl shrink-0"
-                 style={{ background: `linear-gradient(135deg, ${BROWN.bgMid}, ${BROWN.border})`, border: `1px solid ${BROWN.accent}`, boxShadow: `0 0 14px ${BROWN.accent}40` }}>
-              🍹
-            </div>
-            <div>
-              <h2 className="text-3xl font-black tracking-wide leading-none" style={{ color: BROWN.beige }}>Mocktails</h2>
-              <div className="h-[2px] mt-1.5 w-20 rounded-full" style={{ background: `linear-gradient(to right, ${BROWN.beige}, transparent)` }} />
-            </div>
-          </div>
-          <div className="space-y-4">
-            {mocktails.map((item) => (
-              <DrinkSimpleCard key={item.name} name={item.name} description={item.description} price={item.price} image={item.image} BROWN={BROWN} />
-            ))}
-          </div>
-        </section>
-
-        {/* ── SHAKES SECTION ── */}
-        <section id="shakes">
-          <div className="flex items-center gap-3 mb-6">
-            <div className="w-11 h-11 rounded-xl flex items-center justify-center text-xl shrink-0"
-                 style={{ background: `linear-gradient(135deg, ${BROWN.bgMid}, ${BROWN.border})`, border: `1px solid ${BROWN.accent}`, boxShadow: `0 0 14px ${BROWN.accent}40` }}>
-              🥤
-            </div>
-            <div>
-              <h2 className="text-3xl font-black tracking-wide leading-none" style={{ color: BROWN.beige }}>Shakes</h2>
-              <div className="h-[2px] mt-1.5 w-20 rounded-full" style={{ background: `linear-gradient(to right, ${BROWN.beige}, transparent)` }} />
-            </div>
-          </div>
-          <div className="space-y-4">
-            {shakes.map((item) => (
-              <DrinkSimpleCard key={item.name} name={item.name} description={item.description} price={item.price} image={item.image} BROWN={BROWN} />
             ))}
           </div>
         </section>
