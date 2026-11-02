@@ -508,6 +508,43 @@ export const sandwiches: SandwichItem[] = [
   { name: "Chicken Sandwich",       description: "Grilled chicken with cheese, veggies & smoky sauce in toasted bread.",     price: 169, image: "/sandwich/chicken_sandwich.jpg",      isVeg: false },
 ];
 
+export interface PastaItem {
+  name: string;
+  description: string;
+  price: number;
+  image: string;
+}
+
+export interface SideItem {
+  name: string;
+  description: string;
+  price: number;
+  image: string;
+  isVeg: boolean;
+}
+
+export const pastas: PastaItem[] = [
+  { name: "Alfredo Pasta",    description: "Classic creamy white sauce pasta with garlic & parmesan.",                     price: 198, image: "/pasta/alfredo_pasta.jpg"       },
+  { name: "Mix Sauce Pasta",  description: "A rich blend of red & white sauce tossed with veggies & herbs.",               price: 219, image: "/pasta/mix_sauce_pasta.jpg"     },
+  { name: "Makhni Pasta",     description: "Desi twist — pasta in a rich, spiced butter tomato makhni sauce.",             price: 219, image: "/pasta/makhni_pasta.jpg"        },
+  { name: "Alio Olio Pasta",  description: "Classic Italian garlic & olive oil pasta with chilli flakes & parsley.",       price: 209, image: "/pasta/alio_olio_pasta.jpg"     },
+  { name: "Pesto Pasta",      description: "Fresh basil pesto tossed with pasta, pine nuts & parmesan.",                   price: 249, image: "/pasta/pesto_pasta.jpg"         },
+  { name: "Mushroom Pasta",   description: "Earthy sautéed mushrooms in a creamy garlic sauce with herbs.",                price: 249, image: "/pasta/mushroom_pasta.jpg"      },
+  { name: "Chef Special",     description: "Chef's secret sauce with chicken, veggies & a signature seasoning blend.",    price: 249, image: "/pasta/chef_special_pasta.jpg"  },
+];
+
+export const sides: SideItem[] = [
+  { name: "Salted Fries",               description: "Crispy golden fries with a classic salt seasoning.",                          price: 99,  image: "/sides/salted_fries.jpg",               isVeg: true  },
+  { name: "Cheesy Fries",               description: "Golden fries loaded with melted cheese sauce.",                               price: 159, image: "/sides/cheesy_fries.jpg",               isVeg: true  },
+  { name: "Peri Peri Fries",            description: "Crispy fries tossed in bold peri peri seasoning.",                           price: 119, image: "/sides/peri_peri_fries.jpg",            isVeg: true  },
+  { name: "Toasties",                   description: "Toasted bread bites with a savoury filling & melted cheese.",                 price: 179, image: "/sides/toasties.jpg",                   isVeg: true  },
+  { name: "Nachos",                     description: "Crispy tortilla chips with salsa, sour cream & cheese sauce.",                price: 149, image: "/sides/nachos.jpg",                     isVeg: true  },
+  { name: "Maggie",                     description: "Classic masala Maggi noodles — a forever comfort snack.",                     price: 119, image: "/sides/maggie.jpg",                     isVeg: true  },
+  { name: "Cheese Maggie",              description: "Masala Maggi topped with a generous layer of melted cheese.",                 price: 139, image: "/sides/cheese_maggie.jpg",              isVeg: true  },
+  { name: "Korean Cream Cheese Burger", description: "Soft bun with cream cheese garlic butter & Korean-style filling.",           price: 179, image: "/sides/korean_cream_cheese_burger.jpg", isVeg: true  },
+  { name: "Chicken Nachos",             description: "Loaded nachos with seasoned chicken, cheese sauce & jalapeños.",              price: 189, image: "/sides/chicken_nachos.jpg",             isVeg: false },
+];
+
 export const burgers: BurgerItem[] = [
   {
     name: "Aloo Patty Burger",

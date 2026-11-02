@@ -3,7 +3,7 @@
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 import { useState } from "react";
-import { menuCategories, flavours, wraps, subs, mocktails, shakes, pizzas, burgers, salads, sandwiches } from "@/app/_lib/menuData";
+import { menuCategories, flavours, wraps, subs, mocktails, shakes, pizzas, burgers, salads, sandwiches, pastas, sides } from "@/app/_lib/menuData";
 
 // Brown from the actual menu images: #7B4A2D warm medium chocolate
 const BROWN = {
@@ -278,6 +278,16 @@ export default function MenuContent() {
             className="whitespace-nowrap text-[11px] font-bold px-4 py-2 rounded-full transition-all duration-300 tracking-wide"
             style={activeCategory === "sandwiches" ? { background: `linear-gradient(135deg, ${BROWN.beige}, ${BROWN.beigeAlt})`, color: BROWN.bgDeep, boxShadow: `0 0 14px ${BROWN.beige}50` } : { background: BROWN.bgMid, color: BROWN.muted, border: `1px solid ${BROWN.border}60` }}>
             🥪 Sandwiches
+          </a>
+          <a href="#pasta" onClick={() => setActiveCategory("pasta")}
+            className="whitespace-nowrap text-[11px] font-bold px-4 py-2 rounded-full transition-all duration-300 tracking-wide"
+            style={activeCategory === "pasta" ? { background: `linear-gradient(135deg, ${BROWN.beige}, ${BROWN.beigeAlt})`, color: BROWN.bgDeep, boxShadow: `0 0 14px ${BROWN.beige}50` } : { background: BROWN.bgMid, color: BROWN.muted, border: `1px solid ${BROWN.border}60` }}>
+            🍝 Pasta
+          </a>
+          <a href="#sides" onClick={() => setActiveCategory("sides")}
+            className="whitespace-nowrap text-[11px] font-bold px-4 py-2 rounded-full transition-all duration-300 tracking-wide"
+            style={activeCategory === "sides" ? { background: `linear-gradient(135deg, ${BROWN.beige}, ${BROWN.beigeAlt})`, color: BROWN.bgDeep, boxShadow: `0 0 14px ${BROWN.beige}50` } : { background: BROWN.bgMid, color: BROWN.muted, border: `1px solid ${BROWN.border}60` }}>
+            🍟 Sides
           </a>
         </div>
       </nav>
@@ -689,6 +699,51 @@ export default function MenuContent() {
           </p>
           <div className="space-y-4">
             {sandwiches.filter(s => !s.isVeg).map(s => (
+              <VegNonVegCard key={s.name} name={s.name} description={s.description} price={s.price} image={s.image} isVeg={s.isVeg} BROWN={BROWN} />
+            ))}
+          </div>
+        </section>
+
+        {/* ── PASTA SECTION ── */}
+        <section id="pasta">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-11 h-11 rounded-xl flex items-center justify-center text-xl shrink-0"
+                 style={{ background: `linear-gradient(135deg, ${BROWN.bgMid}, ${BROWN.border})`, border: `1px solid ${BROWN.accent}`, boxShadow: `0 0 14px ${BROWN.accent}40` }}>🍝</div>
+            <div>
+              <h2 className="text-3xl font-black tracking-wide leading-none" style={{ color: BROWN.beige }}>Pasta</h2>
+              <div className="h-[2px] mt-1.5 w-20 rounded-full" style={{ background: `linear-gradient(to right, ${BROWN.beige}, transparent)` }} />
+            </div>
+          </div>
+          <div className="space-y-4">
+            {pastas.map(p => (
+              <DrinkSimpleCard key={p.name} name={p.name} description={p.description} price={p.price} image={p.image} BROWN={BROWN} />
+            ))}
+          </div>
+        </section>
+
+        {/* ── SIDES SECTION ── */}
+        <section id="sides">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-11 h-11 rounded-xl flex items-center justify-center text-xl shrink-0"
+                 style={{ background: `linear-gradient(135deg, ${BROWN.bgMid}, ${BROWN.border})`, border: `1px solid ${BROWN.accent}`, boxShadow: `0 0 14px ${BROWN.accent}40` }}>🍟</div>
+            <div>
+              <h2 className="text-3xl font-black tracking-wide leading-none" style={{ color: BROWN.beige }}>Sides</h2>
+              <div className="h-[2px] mt-1.5 w-20 rounded-full" style={{ background: `linear-gradient(to right, ${BROWN.beige}, transparent)` }} />
+            </div>
+          </div>
+          <p className="text-[10px] font-black tracking-[0.3em] uppercase mb-3 flex items-center gap-2" style={{ color: BROWN.beige }}>
+            <span className="inline-block w-3 h-3 rounded-sm border-2 border-green-500" />Veg
+          </p>
+          <div className="space-y-4 mb-6">
+            {sides.filter(s => s.isVeg).map(s => (
+              <VegNonVegCard key={s.name} name={s.name} description={s.description} price={s.price} image={s.image} isVeg={s.isVeg} BROWN={BROWN} />
+            ))}
+          </div>
+          <p className="text-[10px] font-black tracking-[0.3em] uppercase mb-3 flex items-center gap-2" style={{ color: BROWN.beige }}>
+            <span className="inline-block w-3 h-3 rounded-sm border-2 border-red-500" />Non-Veg
+          </p>
+          <div className="space-y-4">
+            {sides.filter(s => !s.isVeg).map(s => (
               <VegNonVegCard key={s.name} name={s.name} description={s.description} price={s.price} image={s.image} isVeg={s.isVeg} BROWN={BROWN} />
             ))}
           </div>
