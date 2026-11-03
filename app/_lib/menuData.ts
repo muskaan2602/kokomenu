@@ -627,7 +627,7 @@ export const burgers: BurgerItem[] = [
   },
   {
     name: "Chicken Smashed Burger",
-    description: "Double smashed chicken patty with cheese, caramelised onions & secret sauce.",
+    description: "Smashed chicken patty with cheese, caramelised onions & secret sauce.",
     price: 199,
     image: "/burgers/chicken_burger.jpg",
     isVeg: false,
