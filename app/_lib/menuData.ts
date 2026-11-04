@@ -49,20 +49,20 @@ export const wraps: WrapItem[] = [
 
 // ── SUBS — sorted by price low→high ──
 export const subs: SubItem[] = [
-  { name: "Aloo Patty Sub",          description: "Crispy potato patty with chutneys, onions & fresh herbs in a soft sub roll.",      price: 159, image: "/subs/veggi_patty_sub.jpg",    isVeg: true  },
-  { name: "Veggie Patty Sub",        description: "Juicy veggie patty loaded with fresh greens and house sauce in a toasted sub.",    price: 159, image: "/subs/veggi_patty_sub.jpg",    isVeg: true  },
-  { name: "Falafel Sub",             description: "Crispy falafel with hummus, pickles, lettuce & tahini in a soft sub roll.",        price: 189, image: "/subs/falafal_sub.jpg",        isVeg: true  },
-  { name: "Hara Bhara Patty Sub",    description: "Wholesome green patty with spinach, peas & mint mayo in a toasted sub.",          price: 199, image: "/subs/veggi_patty_sub.jpg",    isVeg: true  },
-  { name: "Paneer Tikka Sub",        description: "Smoky grilled paneer with tandoori spices, onions & mint chutney in a toasted sub.", price: 179, image: "/subs/pesto_paneer_sub.jpg", isVeg: true  },
-  { name: "Paneer Peri Peri Sub",    description: "Spiced paneer with fiery peri peri sauce, lettuce & fresh veggies in a soft sub.", price: 179, image: "/subs/pesto_paneer_sub.jpg",  isVeg: true  },
-  { name: "Paneer Patty Sub",        description: "Classic seasoned paneer patty with crisp veggies and tangy sauce in a toasted sub.", price: 209, image: "/subs/pesto_paneer_sub.jpg", isVeg: true  },
-  { name: "Pesto Paneer Sub",        description: "Grilled paneer with fresh basil pesto, sun-dried tomatoes & greens.",              price: 209, image: "/subs/pesto_paneer_sub.jpg",  isVeg: true  },
-  { name: "Chicken Sub",             description: "Seasoned grilled chicken with fresh veggies & sauces in a toasted sub bun.",       price: 209, image: "/subs/chicken_sub.jpg",        isVeg: false },
-  { name: "Tandoori Chicken Sub",    description: "Marinated tandoori chicken with onions, chutney & yogurt sauce in a toasted sub.", price: 209, image: "/subs/chicken_sub.jpg",        isVeg: false },
-  { name: "Peri Peri Chicken Sub",   description: "Grilled chicken tossed in bold peri peri sauce with fresh slaw in a sub.",         price: 209, image: "/subs/chicken_sub.jpg",        isVeg: false },
-  { name: "Chicken Seekh Kabab Sub", description: "Tender chicken seekh kabab with mint chutney, onions & crisp lettuce in a sub.",   price: 209, image: "/subs/chicken_sub.jpg",        isVeg: false },
-  { name: "Krispy Chicken Sub",      description: "Crunchy fried chicken with coleslaw, pickles & smoky mayo in a toasted sub.",      price: 219, image: "/subs/krispy_chicken_sub.jpg", isVeg: false },
-  { name: "Pesto Chicken Sub",       description: "Grilled chicken with basil pesto, sun-dried tomatoes & fresh greens.",             price: 259, image: "/subs/pesto_chicken_sub.jpg",  isVeg: false },
+  { name: "Aloo Patty Sub",          description: "Crispy potato patty with chutneys, onions & fresh herbs in a soft sub roll.",        price: 159, image: "/subs/veggi_patty_sub.jpg",    isVeg: true  },
+  { name: "Veggie Patty Sub",        description: "Juicy veggie patty loaded with fresh greens and house sauce in a toasted sub.",      price: 159, image: "/subs/veggi_sub_2.jpg",        isVeg: true  },
+  { name: "Falafel Sub",             description: "Crispy falafel with hummus, pickles, lettuce & tahini in a soft sub roll.",          price: 189, image: "/subs/falafal_sub.jpg",        isVeg: true  },
+  { name: "Paneer Tikka Sub",        description: "Smoky grilled paneer with tandoori spices, onions & mint chutney in a toasted sub.", price: 179, image: "/subs/pesto_paneer_sub.jpg",   isVeg: true  },
+  { name: "Paneer Peri Peri Sub",    description: "Spiced paneer with fiery peri peri sauce, lettuce & fresh veggies in a soft sub.",   price: 179, image: "/subs/pesto_paneer_sub_2.jpg", isVeg: true  },
+  { name: "Hara Bhara Patty Sub",    description: "Wholesome green patty with spinach, peas & mint mayo in a toasted sub.",            price: 199, image: "/subs/paneer_sub_2.jpg",        isVeg: true  },
+  { name: "Paneer Patty Sub",        description: "Classic seasoned paneer patty with crisp veggies and tangy sauce in a toasted sub.",price: 209, image: "/subs/generic_sub.jpg",         isVeg: true  },
+  { name: "Pesto Paneer Sub",        description: "Grilled paneer with fresh basil pesto, sun-dried tomatoes & greens.",               price: 209, image: "/subs/pesto_paneer_sub.jpg",    isVeg: true  },
+  { name: "Chicken Sub",             description: "Seasoned grilled chicken with fresh veggies & sauces in a toasted sub bun.",        price: 209, image: "/subs/chicken_sub.jpg",         isVeg: false },
+  { name: "Tandoori Chicken Sub",    description: "Marinated tandoori chicken with onions, chutney & yogurt sauce in a toasted sub.",  price: 209, image: "/subs/chicken_sub_2.jpg",       isVeg: false },
+  { name: "Peri Peri Chicken Sub",   description: "Grilled chicken tossed in bold peri peri sauce with fresh slaw in a sub.",          price: 209, image: "/subs/chicken_sub_3.jpg",       isVeg: false },
+  { name: "Chicken Seekh Kabab Sub", description: "Tender chicken seekh kabab with mint chutney, onions & crisp lettuce in a sub.",    price: 209, image: "/subs/chicken_sub_4.jpg",       isVeg: false },
+  { name: "Krispy Chicken Sub",      description: "Crunchy fried chicken with coleslaw, pickles & smoky mayo in a toasted sub.",       price: 219, image: "/subs/krispy_chicken_sub.jpg",  isVeg: false },
+  { name: "Pesto Chicken Sub",       description: "Grilled chicken with basil pesto, sun-dried tomatoes & fresh greens.",              price: 259, image: "/subs/pesto_chicken_sub.jpg",   isVeg: false },
 ];
 
 // ── MENU CATEGORIES — items sorted low→high ──
@@ -93,7 +93,7 @@ export const menuCategories: MenuCategory[] = [
       { name: "Iced Mocha",      description: "Espresso, chocolate, chilled milk & ice. Rich, creamy & indulgent.",             price: 149, image: "/drinks/iced_mocha.jpg"    },
       { name: "Vanilla Frappe",  description: "Classic vanilla blended with chilled milk & ice. Sweet & smooth.",               price: 159, image: "/drinks/vanilla_frappe.jpg"          },
       { name: "Hazelnut Frappe", description: "Rich hazelnut flavour blended with coffee, milk & ice.",                         price: 159, image: "/drinks/vanilla_hazelnut_frappe.jpg"  },
-      { name: "Tiramisu Frappe", description: "Tiramisu-inspired frappe with espresso, mascarpone & cocoa dust.",               price: 159, image: "/drinks/iced_mocha.jpg"    },
+      { name: "Tiramisu Frappe", description: "Tiramisu-inspired frappe with espresso, mascarpone & cocoa dust.",               price: 159, image: "/drinks/vanilla_frappe.jpg"    },
       { name: "Brownie Frappe",  description: "Rich brownie, chocolate, coffee, chilled milk & ice. Creamy, fudgy & irresistible.", price: 179, image: "/drinks/brownie_frappe.jpg" },
     ],
     flavourNote: "Vanilla · Hazelnut · Caramel · Rose Pistachio · Irish · Roasted Hazelnut · Tiramisu · Cheese Cake",
