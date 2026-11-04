@@ -187,15 +187,15 @@ export const burgers: BurgerItem[] = [
 // ── SALADS — sorted low→high ──
 export const salads: SaladItem[] = [
   { name: "Paneer Tikka Salad",        description: "Smoky tandoori paneer with fresh greens, veggies & zesty dressing.",           price: 159, image: "/salads/paneer_salad.jpg",          isVeg: true  },
-  { name: "Paneer Peri Peri Salad",    description: "Fiery peri peri paneer over crisp salad greens with a punchy sauce.",          price: 159, image: "/salads/paneer_salad.jpg",          isVeg: true  },
-  { name: "Krispy Paneer Salad",       description: "Crispy fried paneer strips on a bed of fresh greens with house dressing.",     price: 199, image: "/salads/paneer_salad.jpg",          isVeg: true  },
+  { name: "Paneer Peri Peri Salad",    description: "Fiery peri peri paneer over crisp salad greens with a punchy sauce.",          price: 159, image: "/salads/paneer_salad_2.jpg",        isVeg: true  },
+  { name: "Krispy Paneer Salad",       description: "Crispy fried paneer strips on a bed of fresh greens with house dressing.",     price: 199, image: "/salads/paneer_salad_3.jpg",        isVeg: true  },
   { name: "Hara Bhara Kebab Salad",    description: "Green spinach-pea kebabs over a vibrant salad with mint yogurt dressing.",    price: 199, image: "/salads/hara_bhara_salad.jpg",      isVeg: true  },
   { name: "Falafel Salad",             description: "Crispy falafel over hummus, fresh greens, tomatoes & tahini drizzle.",         price: 199, image: "/salads/falafel_salad.jpg",         isVeg: true  },
   { name: "Classic Sauté Veggies",     description: "Seasonal vegetables sautéed in garlic butter with herbs & seasoning.",        price: 199, image: "/salads/classic_saute_veggies.jpg",  isVeg: true  },
   { name: "Paneer Sauté Veggies",      description: "Tender paneer with stir-fried vegetables in a rich buttery sauce.",            price: 239, image: "/salads/paneer_saute_veggies.jpg",  isVeg: true  },
   { name: "Tandoori Chicken Salad",    description: "Grilled tandoori chicken over fresh greens with a cooling mint dressing.",    price: 189, image: "/salads/chicken_salad.jpg",         isVeg: false },
-  { name: "Peri Peri Chicken Salad",   description: "Spicy peri peri chicken on crisp greens with a tangy citrus dressing.",      price: 189, image: "/salads/chicken_salad.jpg",         isVeg: false },
-  { name: "Chicken Seekh Kebab Salad", description: "Succulent seekh kebab slices over a fresh garden salad with raita dressing.", price: 189, image: "/salads/chicken_salad.jpg",         isVeg: false },
+  { name: "Peri Peri Chicken Salad",   description: "Spicy peri peri chicken on crisp greens with a tangy citrus dressing.",      price: 189, image: "/salads/chicken_salad_2.jpg",       isVeg: false },
+  { name: "Chicken Seekh Kebab Salad", description: "Succulent seekh kebab slices over a fresh garden salad with raita dressing.", price: 189, image: "/salads/chicken_salad_3.jpg",       isVeg: false },
   { name: "Chicken Sauté Veggies",     description: "Tender chicken with stir-fried seasonal vegetables in a bold sauce.",         price: 249, image: "/salads/chicken_saute_veggies.jpg", isVeg: false },
 ];
 
