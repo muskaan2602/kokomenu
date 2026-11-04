@@ -89,7 +89,7 @@ export const menuCategories: MenuCategory[] = [
     icon: "🥤",
     items: [
       { name: "Cafe Frappe",     description: "Rich coffee, chilled milk, ice & a creamy blend. Smooth, bold & refreshing.",    price: 139, image: "/drinks/cafe_frappe.jpg"   },
-      { name: "Iced Latte",      description: "Smooth espresso, chilled milk & ice. Light, balanced & refreshing.",             price: 139, image: "/drinks/iced_latte.jpg"    },
+      { name: "Iced Latte",      description: "Smooth espresso, chilled milk & ice. Light, balanced & refreshing.",             price: 139, image: "/drinks/iced_latte_new.jpg"    },
       { name: "Iced Mocha",      description: "Espresso, chocolate, chilled milk & ice. Rich, creamy & indulgent.",             price: 149, image: "/drinks/iced_mocha.jpg"    },
       { name: "Vanilla Frappe",  description: "Classic vanilla blended with chilled milk & ice. Sweet & smooth.",               price: 159, image: "/drinks/vanilla_frappe_new.jpg"          },
       { name: "Hazelnut Frappe", description: "Rich hazelnut flavour blended with coffee, milk & ice.",                         price: 159, image: "/drinks/hazelnut_frappe_new.jpg"          },
