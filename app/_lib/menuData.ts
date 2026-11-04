@@ -93,7 +93,7 @@ export const menuCategories: MenuCategory[] = [
       { name: "Iced Mocha",      description: "Espresso, chocolate, chilled milk & ice. Rich, creamy & indulgent.",             price: 149, image: "/drinks/iced_mocha.jpg"    },
       { name: "Vanilla Frappe",  description: "Classic vanilla blended with chilled milk & ice. Sweet & smooth.",               price: 159, image: "/drinks/vanilla_frappe_new.jpg"          },
       { name: "Hazelnut Frappe", description: "Rich hazelnut flavour blended with coffee, milk & ice.",                         price: 159, image: "/drinks/hazelnut_frappe_new.jpg"          },
-      { name: "Tiramisu Frappe", description: "Tiramisu-inspired frappe with espresso, mascarpone & cocoa dust.",               price: 159, image: "/drinks/vanilla_frappe.jpg"    },
+      { name: "Tiramisu Frappe", description: "Tiramisu-inspired frappe with espresso, mascarpone & cocoa dust.",               price: 159, image: "/drinks/tiramisu_frappe.jpg"    },
       { name: "Brownie Frappe",  description: "Rich brownie, chocolate, coffee, chilled milk & ice. Creamy, fudgy & irresistible.", price: 179, image: "/drinks/brownie_frappe.jpg" },
     ],
     flavourNote: "Vanilla · Hazelnut · Caramel · Rose Pistachio · Irish · Roasted Hazelnut · Tiramisu · Cheese Cake",
