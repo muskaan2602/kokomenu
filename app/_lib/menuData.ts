@@ -50,13 +50,13 @@ export const wraps: WrapItem[] = [
 // ── SUBS — sorted by price low→high ──
 export const subs: SubItem[] = [
   { name: "Aloo Patty Sub",          description: "Crispy potato patty with chutneys, onions & fresh herbs in a soft sub roll.",        price: 159, image: "/subs/veggi_patty_sub.jpg",    isVeg: true  },
-  { name: "Veggie Patty Sub",        description: "Juicy veggie patty loaded with fresh greens and house sauce in a toasted sub.",      price: 159, image: "/subs/veggi_sub_2.jpg",        isVeg: true  },
+  { name: "Veggie Patty Sub",        description: "Juicy veggie patty loaded with fresh greens and house sauce in a toasted sub.",      price: 159, image: "/subs/pesto_paneer_sub.jpg",   isVeg: true  },
   { name: "Falafel Sub",             description: "Crispy falafel with hummus, pickles, lettuce & tahini in a soft sub roll.",          price: 189, image: "/subs/falafal_sub.jpg",        isVeg: true  },
-  { name: "Paneer Tikka Sub",        description: "Smoky grilled paneer with tandoori spices, onions & mint chutney in a toasted sub.", price: 179, image: "/subs/pesto_paneer_sub.jpg",   isVeg: true  },
-  { name: "Paneer Peri Peri Sub",    description: "Spiced paneer with fiery peri peri sauce, lettuce & fresh veggies in a soft sub.",   price: 179, image: "/subs/pesto_paneer_sub_2.jpg", isVeg: true  },
-  { name: "Hara Bhara Patty Sub",    description: "Wholesome green patty with spinach, peas & mint mayo in a toasted sub.",            price: 199, image: "/subs/paneer_sub_2.jpg",        isVeg: true  },
+  { name: "Paneer Tikka Sub",        description: "Smoky grilled paneer with tandoori spices, onions & mint chutney in a toasted sub.", price: 179, image: "/subs/pesto_paneer_sub_2.jpg", isVeg: true  },
+  { name: "Paneer Peri Peri Sub",    description: "Spiced paneer with fiery peri peri sauce, lettuce & fresh veggies in a soft sub.",   price: 179, image: "/subs/paneer_sub_2.jpg",       isVeg: true  },
+  { name: "Hara Bhara Patty Sub",    description: "Wholesome green patty with spinach, peas & mint mayo in a toasted sub.",            price: 199, image: "/subs/veggi_sub_2.jpg",        isVeg: true  },
   { name: "Paneer Patty Sub",        description: "Classic seasoned paneer patty with crisp veggies and tangy sauce in a toasted sub.",price: 209, image: "/subs/generic_sub.jpg",         isVeg: true  },
-  { name: "Pesto Paneer Sub",        description: "Grilled paneer with fresh basil pesto, sun-dried tomatoes & greens.",               price: 209, image: "/subs/pesto_paneer_sub.jpg",    isVeg: true  },
+  { name: "Pesto Paneer Sub",        description: "Grilled paneer with fresh basil pesto, sun-dried tomatoes & greens.",               price: 209, image: "/subs/veggi_patty_sub.jpg",    isVeg: true  },
   { name: "Chicken Sub",             description: "Seasoned grilled chicken with fresh veggies & sauces in a toasted sub bun.",        price: 209, image: "/subs/chicken_sub.jpg",         isVeg: false },
   { name: "Tandoori Chicken Sub",    description: "Marinated tandoori chicken with onions, chutney & yogurt sauce in a toasted sub.",  price: 209, image: "/subs/chicken_sub_2.jpg",       isVeg: false },
   { name: "Peri Peri Chicken Sub",   description: "Grilled chicken tossed in bold peri peri sauce with fresh slaw in a sub.",          price: 209, image: "/subs/chicken_sub_3.jpg",       isVeg: false },
