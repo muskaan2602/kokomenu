@@ -3,7 +3,7 @@
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 import { useState } from "react";
-import { menuCategories, flavours, wraps, subs, mocktails, shakes, pizzas, burgers, salads, sandwiches, pastas, sides, desserts } from "@/app/_lib/menuData";
+import { menuCategories, flavours, wraps, subs, mocktails, shakes, pizzas, burgers, salads, sandwiches, pastas, pastaAddOn, sides, desserts } from "@/app/_lib/menuData";
 
 // Brown from the actual menu images: #7B4A2D warm medium chocolate
 const BROWN = {
@@ -660,6 +660,17 @@ export default function MenuContent() {
             {pastas.map(p => (
               <DrinkSimpleCard key={p.name} name={p.name} description={p.description} price={p.price} image={p.image} BROWN={BROWN} />
             ))}
+          </div>
+          {/* Cheese add-on note */}
+          <div className="mt-4 rounded-xl p-4 flex items-center gap-3"
+               style={{ background: `linear-gradient(135deg, ${BROWN.bgDeep}, ${BROWN.bgMid}60)`, border: `1px solid ${BROWN.border}50` }}>
+            <span style={{ color: BROWN.beige }} className="text-base">🧀</span>
+            <div className="inline-block">
+              <span className="text-sm font-semibold" style={{ color: BROWN.text }}>Cheese Add-On </span>
+              <span className="text-base font-black" style={{ color: BROWN.beige }}>+₹40</span>
+              <div className="h-[2px] rounded-full mt-0.5"
+                   style={{ background: `linear-gradient(to right, ${BROWN.beige}, transparent)` }} />
+            </div>
           </div>
         </section>
 
