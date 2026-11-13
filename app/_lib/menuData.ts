@@ -222,6 +222,14 @@ export const pastas: PastaItem[] = [
 
 export const pastaAddOn = "Cheese Add-On +₹40";
 
+export interface ChaiItem { name: string; description: string; price: number; image: string; }
+
+// ── CHAI ──
+export const chais: ChaiItem[] = [
+  { name: "Masala Chai",  description: "Aromatic spiced tea brewed with ginger, cardamom & cinnamon. Served for 2 cups.", price: 99, image: "/chai/masala_chai.jpg"  },
+  { name: "Elaichi Chai", description: "Classic cardamom tea, light & fragrant. Served for 2 cups.",                     price: 99, image: "/chai/elaichi_chai.jpg" },
+];
+
 // ── SIDES — sorted low→high ──
 export const sides: SideItem[] = [
   { name: "Salted Fries",               description: "Crispy golden fries with a classic salt seasoning.",                          price: 99,  image: "/sides/salted_fries.jpg",               isVeg: true  },
@@ -231,7 +239,7 @@ export const sides: SideItem[] = [
   { name: "Nachos",                     description: "Crispy tortilla chips with salsa, sour cream & cheese sauce.",                price: 149, image: "/sides/nachos.jpg",                     isVeg: true  },
   { name: "Cheesy Fries",               description: "Golden fries loaded with melted cheese sauce.",                               price: 159, image: "/sides/cheesy_fries.jpg",               isVeg: true  },
   { name: "Toasties",                   description: "Toasted bread bites with a savoury filling & melted cheese.",                 price: 179, image: "/sides/toasties.jpg",                   isVeg: true  },
-  { name: "Korean Cream Cheese Burger", description: "Soft bun with cream cheese garlic butter & Korean-style filling.",           price: 199, image: "/sides/korean_cream_cheese_burger.jpg", isVeg: true  },
+  { name: "Korean Cream Cheese Bun", description: "Soft bun with cream cheese garlic butter & Korean-style filling.",           price: 199, image: "/sides/korean_cream_cheese_burger.jpg", isVeg: true  },
   { name: "Chicken Nachos",             description: "Loaded nachos with seasoned chicken, cheese sauce & jalapeños.",              price: 189, image: "/sides/chicken_nachos.jpg",             isVeg: false },
 ];
 
