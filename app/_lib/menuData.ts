@@ -179,8 +179,8 @@ export const burgers: BurgerItem[] = [
   { name: "Aloo Patty Burger",          description: "Crispy spiced potato patty with lettuce, tomato & tangy sauces.",           price: 119, image: "/burgers/veggie_burger.jpg",         isVeg: true  },
   { name: "Falafel Burger",             description: "Crispy falafel patty with hummus, pickles & fresh greens.",                 price: 139, image: "/burgers/paneer_burger.jpg",         isVeg: true  },
   { name: "Spicy Korean Paneer Burger", description: "Grilled paneer with fiery Korean sauce, slaw & pickled veggies.",           price: 159, image: "/burgers/kimchi_burger.jpg",         isVeg: true  },
-  { name: "Smashed Mushroom Burger",    description: "Juicy smashed mushroom patty with melted cheese & garlic aioli.",           price: 169, image: "/burgers/mushroom_burger.jpg",       isVeg: true  },
   { name: "Krispy Chicken Burger",      description: "Crunchy fried chicken with coleslaw, pickles & smoky mayo.",                price: 159, image: "/burgers/crispy_chicken_burger.jpg", isVeg: false },
+  { name: "Smashed Mushroom Burger",    description: "Juicy smashed mushroom patty with melted cheese & garlic aioli.",           price: 169, image: "/burgers/mushroom_burger.jpg",       isVeg: true  },
   { name: "Chicken Smashed Burger",     description: "Smashed chicken patty with cheese, caramelised onions & secret sauce.",    price: 199, image: "/burgers/chicken_burger.jpg",        isVeg: false },
 ];
 
@@ -215,9 +215,9 @@ export const pastas: PastaItem[] = [
   { name: "Alio Olio Pasta", description: "Classic Italian garlic & olive oil pasta with chilli flakes & parsley.",          price: 209, image: "/pasta/alio_olio_pasta.jpg"    },
   { name: "Mix Sauce Pasta", description: "A rich blend of red & white sauce tossed with veggies & herbs.",                  price: 229, image: "/pasta/mix_sauce_pasta.jpg"    },
   { name: "Makhni Pasta",    description: "Desi twist — pasta in a rich, spiced butter tomato makhni sauce.",                price: 229, image: "/pasta/makhni_pasta.jpg"       },
-  { name: "Pesto Pasta",     description: "Fresh basil pesto tossed with pasta, pine nuts & parmesan.",                      price: 259, image: "/pasta/pesto_pasta.jpg"        },
   { name: "Mushroom Pasta",  description: "Earthy sautéed mushrooms in a creamy garlic sauce with herbs.",                   price: 249, image: "/pasta/mushroom_pasta.jpg"     },
   { name: "Chef Special",    description: "Chef's secret sauce with chicken, veggies & a signature seasoning blend.",        price: 249, image: "/pasta/chef_special_pasta.jpg" },
+  { name: "Pesto Pasta",     description: "Fresh basil pesto tossed with pasta, pine nuts & parmesan.",                      price: 259, image: "/pasta/pesto_pasta.jpg"        },
 ];
 
 export const pastaAddOn = "Cheese Add-On +₹40";
@@ -232,15 +232,15 @@ export const chais: ChaiItem[] = [
 
 // ── SIDES — sorted low→high ──
 export const sides: SideItem[] = [
-  { name: "Salted Fries",               description: "Crispy golden fries with a classic salt seasoning.",                          price: 99,  image: "/sides/salted_fries.jpg",               isVeg: true  },
-  { name: "Peri Peri Fries",            description: "Crispy fries tossed in bold peri peri seasoning.",                           price: 119, image: "/sides/peri_peri_fries.jpg",            isVeg: true  },
-  { name: "Maggie",                     description: "Classic masala Maggi noodles — a forever comfort snack.",                     price: 119, image: "/sides/maggie.jpg",                     isVeg: true  },
-  { name: "Cheese Maggie",              description: "Masala Maggi topped with a generous layer of melted cheese.",                 price: 139, image: "/sides/cheese_maggie.jpg",              isVeg: true  },
-  { name: "Nachos",                     description: "Crispy tortilla chips with salsa, sour cream & cheese sauce.",                price: 149, image: "/sides/nachos.jpg",                     isVeg: true  },
-  { name: "Cheesy Fries",               description: "Golden fries loaded with melted cheese sauce.",                               price: 159, image: "/sides/cheesy_fries.jpg",               isVeg: true  },
-  { name: "Toasties",                   description: "Toasted bread bites with a savoury filling & melted cheese.",                 price: 179, image: "/sides/toasties.jpg",                   isVeg: true  },
-  { name: "Korean Cream Cheese Bun", description: "Soft bun with cream cheese garlic butter & Korean-style filling.",           price: 199, image: "/sides/korean_cream_cheese_burger.jpg", isVeg: true  },
-  { name: "Chicken Nachos",             description: "Loaded nachos with seasoned chicken, cheese sauce & jalapeños.",              price: 189, image: "/sides/chicken_nachos.jpg",             isVeg: false },
+  { name: "Salted Fries",             description: "Crispy golden fries with a classic salt seasoning.",                          price: 99,  image: "/sides/salted_fries.jpg",               isVeg: true  },
+  { name: "Peri Peri Fries",          description: "Crispy fries tossed in bold peri peri seasoning.",                           price: 119, image: "/sides/peri_peri_fries.jpg",            isVeg: true  },
+  { name: "Maggie",                   description: "Classic masala Maggi noodles — a forever comfort snack.",                     price: 119, image: "/sides/maggie.jpg",                     isVeg: true  },
+  { name: "Cheese Maggie",            description: "Masala Maggi topped with a generous layer of melted cheese.",                 price: 139, image: "/sides/cheese_maggie.jpg",              isVeg: true  },
+  { name: "Nachos",                   description: "Crispy tortilla chips with salsa, sour cream & cheese sauce.",                price: 149, image: "/sides/nachos.jpg",                     isVeg: true  },
+  { name: "Cheesy Fries",             description: "Golden fries loaded with melted cheese sauce.",                               price: 159, image: "/sides/cheesy_fries.jpg",               isVeg: true  },
+  { name: "Toasties",                 description: "Toasted bread bites with a savoury filling & melted cheese.",                 price: 179, image: "/sides/toasties.jpg",                   isVeg: true  },
+  { name: "Chicken Nachos",           description: "Loaded nachos with seasoned chicken, cheese sauce & jalapeños.",              price: 189, image: "/sides/chicken_nachos.jpg",             isVeg: false },
+  { name: "Korean Cream Cheese Bun",  description: "Soft bun with cream cheese garlic butter & Korean-style filling.",           price: 199, image: "/sides/korean_cream_cheese_burger.jpg", isVeg: true  },
 ];
 
 // ── DESSERTS — sorted low→high ──

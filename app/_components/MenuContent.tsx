@@ -18,6 +18,7 @@ const BROWN = {
   muted:    "#8B6344",   // muted text
 };
 
+
 const TAG_COLORS: Record<string, { bg: string; text: string }> = {
   Popular:    { bg: "#78350f", text: "#fcd34d" },
   Bestseller: { bg: "#713f12", text: "#fde68a" },
