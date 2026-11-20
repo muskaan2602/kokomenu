@@ -238,7 +238,7 @@ export const sides: SideItem[] = [
   { name: "Cheese Maggie",            description: "Masala Maggi topped with a generous layer of melted cheese.",                 price: 139, image: "/sides/cheese_maggie.jpg",              isVeg: true  },
   { name: "Nachos",                   description: "Crispy tortilla chips with salsa, sour cream & cheese sauce.",                price: 149, image: "/sides/nachos.jpg",                     isVeg: true  },
   { name: "Cheesy Fries",             description: "Golden fries loaded with melted cheese sauce.",                               price: 159, image: "/sides/cheesy_fries.jpg",               isVeg: true  },
-  { name: "Toasties",                 description: "Toasted bread bites with a savoury filling & melted cheese.",                 price: 179, image: "/sides/toasties.jpg",                   isVeg: true  },
+  { name: "Toasties",                 description: "Toasted bread bites with a savoury filling & melted cheese.",                 price: 199, image: "/sides/toasties.jpg",                   isVeg: true  },
   { name: "Chicken Nachos",           description: "Loaded nachos with seasoned chicken, cheese sauce & jalapeños.",              price: 189, image: "/sides/chicken_nachos.jpg",             isVeg: false },
   { name: "Korean Cream Cheese Bun",  description: "Soft bun with cream cheese garlic butter & Korean-style filling.",           price: 199, image: "/sides/korean_cream_cheese_burger.jpg", isVeg: true  },
 ];
